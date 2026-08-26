@@ -1,0 +1,2 @@
+# velaroclean.pl
+Strona internetowa 
