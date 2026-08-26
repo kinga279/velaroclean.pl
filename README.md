@@ -1,2 +1,831 @@
 # velaroclean.pl
-Strona internetowa 
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velaro Clean | Profesjonalne sprzątanie biur i magazynów | Warszawa i okolice</title>
+    <meta name="description" content="Velaro Clean oferuje profesjonalne sprzątanie biur, magazynów, hal i obiektów komercyjnych na terenie Warszawy i okolic. Bezpłatna wizja lokalna i indywidualna wycena w 24h.">
+    <link rel="canonical" href="https://velaroclean.pl/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Velaro Clean | Profesjonalne sprzątanie biur i magazynów">
+    <meta property="og:description" content="Velaro Clean oferuje profesjonalne sprzątanie biur, magazynów, hal i obiektów komercyjnych na terenie Warszawy i okolic.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velaroclean.pl/">
+
+    <!-- Favicon Generated from Official Logo SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F172A'/><path d='M25 30 L45 75 L65 30' stroke='%230284C7' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/><circle cx='75' cy='30' r='5' fill='%230284C7'/></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            accent: '#0284C7',
+                            accentHover: '#0369A1',
+                            lightBg: '#F8FAFC',
+                            slateCard: '#1E293B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        .hero-slide {
+            transition: opacity 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- PASEK KOMUNIKATU NAD HEADEREM -->
+    <div class="bg-brand-navy text-slate-200 text-xs sm:text-sm py-2 px-4 text-center border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-2">
+            <span class="font-medium tracking-wide flex items-center justify-center gap-2 mx-auto sm:mx-0">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                BEZPŁATNA WIZJA LOKALNA I WYCENA W 24H &bull; OBSŁUGUJEMY WARSZAWĘ I OKOLICE
+            </span>
+            <div class="hidden md:flex items-center space-x-6 text-slate-300">
+                <a href="tel:+48519724147" class="hover:text-white transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    +48 519 724 147
+                </a>
+                <a href="mailto:kontakt@velaroclean.pl" class="hover:text-white transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    kontakt@velaroclean.pl
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md transition-shadow duration-300 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- LOGO VELARO CLEAN -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-accent rounded-lg p-1">
+                <img src="logo.png" alt="Velaro Clean - profesjonalna czystość" class="h-16 sm:h-[72px] w-auto object-contain" loading="eager">
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                <a href="#about" class="nav-link hover:text-brand-accent transition-colors">O nas</a>
+                <a href="#services" class="nav-link hover:text-brand-accent transition-colors">Usługi</a>
+                <a href="#process" class="nav-link hover:text-brand-accent transition-colors">Współpraca</a>
+                <a href="#location" class="nav-link hover:text-brand-accent transition-colors">Obszar działań</a>
+                <a href="#contact" class="nav-link hover:text-brand-accent transition-colors">Kontakt</a>
+            </nav>
+
+            <!-- PRAWA STRONA HEADERA -->
+            <div class="hidden lg:flex items-center space-x-6 text-xs text-slate-600 border-l border-slate-200 pl-6">
+                <div class="text-right">
+                    <div class="font-bold text-slate-900 flex items-center justify-end gap-1">
+                        <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Nadarzyn k. Warszawy
+                    </div>
+                    <div class="text-slate-500">ul. Pruszkowska 2a</div>
+                </div>
+                <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow">
+                    Wycena w 24h
+                </a>
+            </div>
+
+            <!-- MOBILE PRZYCISKI -->
+            <div class="flex items-center space-x-3 lg:hidden">
+                <a href="tel:+48519724147" aria-label="Zadzwoń teraz" class="p-2.5 bg-brand-accent/10 text-brand-accent rounded-lg hover:bg-brand-accent/20 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </a>
+                <button id="mobile-menu-btn" aria-label="Otwórz menu" class="p-2.5 text-slate-700 hover:text-slate-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-accent">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MENU MOBILNE -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-4 shadow-xl">
+            <nav class="flex flex-col space-y-3 font-semibold text-slate-700">
+                <a href="#about" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-accent">O nas</a>
+                <a href="#services" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-accent">Usługi</a>
+                <a href="#process" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-accent">Współpraca</a>
+                <a href="#location" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-accent">Obszar działań</a>
+                <a href="#contact" class="mobile-nav-link py-2 border-b border-slate-100 hover:text-brand-accent">Kontakt</a>
+            </nav>
+            <div class="pt-2 space-y-3 text-sm">
+                <div class="flex items-center text-slate-600 gap-2">
+                    <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    ul. Pruszkowska 2a, 05-830 Nadarzyn (Warszawa i okolice)
+                </div>
+                <div class="flex items-center text-slate-600 gap-2">
+                    <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    kontakt@velaroclean.pl
+                </div>
+                <a href="#contact" class="mobile-nav-link block text-center bg-brand-accent text-white py-3 rounded-lg font-semibold w-full">
+                    BEZPŁATNA WIZJA LOKALNA
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="relative bg-brand-navy text-white min-h-[85vh] flex items-center overflow-hidden">
+            <div id="hero-slider" class="absolute inset-0 z-0">
+                <div class="hero-slide absolute inset-0 opacity-100 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="hero-slide absolute inset-0 opacity-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-brand-navy/60"></div>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
+                <div class="max-w-3xl space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/20 border border-brand-accent/30 text-brand-accent text-xs sm:text-sm font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+                        Warszawa i okolice &bull; Obsługa B2B
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Profesjonalna czystość każdego dnia
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-light text-slate-300">
+                        Zaufaj specjalistom.
+                    </p>
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        Wspieramy firmy oraz klientów indywidualnych w zapewnieniu najwyższej jakości czystości biur, magazynów i obiektów komercyjnych na terenie Warszawy oraz okolicznych miejscowości.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold text-center rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                            BEZPŁATNA WIZJA LOKALNA I WYCENA W 24H
+                        </a>
+                        <a href="tel:+48519724147" class="inline-flex items-center justify-center px-6 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl backdrop-blur-sm transition-all border border-white/10">
+                            <svg class="w-5 h-5 mr-2 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            +48 519 724 147
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKCJA O NAS -->
+        <section id="about" class="py-20 lg:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Profesjonalne sprzątanie biur, magazynów i obiektów komercyjnych
+                    </h2>
+                    <p class="mt-4 text-lg text-brand-accent font-medium">
+                        Czystość, która wspiera Twój biznes w Warszawie i okolicach
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6 text-slate-600 text-base leading-relaxed">
+                        <p class="text-lg font-medium text-slate-800">
+                            Velaro Clean zapewnia kompleksowe usługi sprzątania dla firm, biur, magazynów, hal oraz obiektów komercyjnych. Dbamy o wysoki standard czystości, terminowość i elastyczną organizację pracy dopasowaną do funkcjonowania Twojej firmy.
+                        </p>
+                        <p>
+                            Velaro Clean to firma specjalizująca się w profesjonalnym utrzymaniu czystości w obiektach biznesowych i komercyjnych. Wiemy, że dla naszych klientów liczy się nie tylko efekt sprzątania, ale również punktualność, dobra komunikacja oraz pewność, że usługa zostanie wykonana na najwyższym poziomie.
+                        </p>
+                        <p>
+                            Dlatego każdy obiekt traktujemy indywidualnie. Przed rozpoczęciem współpracy poznajemy potrzeby klienta, specyfikę obiektu oraz oczekiwany zakres prac. Na tej podstawie przygotowujemy dopasowany harmonogram oraz przejrzystą ofertę.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
+                            <div class="w-10 h-10 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Elastyczne godziny pracy</h3>
+                            <p class="text-xs text-slate-500">Dopasowujemy się do rytmu operacyjnego Twojego obiektu.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
+                            <div class="w-10 h-10 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Profesjonalny sprzęt i środki</h3>
+                            <p class="text-xs text-slate-500">Używamy wyselekcjonowanej chemii i profesjonalnych urządzeń.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
+                            <div class="w-10 h-10 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Oferta szyta na miarę</h3>
+                            <p class="text-xs text-slate-500">Zakres prac idealnie odpowiadający Twoim oczekiwaniom.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
+                            <div class="w-10 h-10 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900">Bezpłatna wizja lokalna</h3>
+                            <p class="text-xs text-slate-500">Darmowy dojazd i wycena na terenie Warszawy i okolic.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-slate-900 text-white rounded-2xl text-center flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="text-left space-y-1">
+                        <h4 class="text-xl font-bold">Szukasz niezawodnej obsługi czystości w swojej firmie?</h4>
+                        <p class="text-slate-400 text-sm">Skontaktuj się z nami telefonicznie i omów szczegóły obiektu.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                        <a href="#contact" class="px-6 py-3 bg-brand-accent hover:bg-brand-accentHover text-white font-bold rounded-xl text-center transition-colors">
+                            Poproś o bezpłatną wycenę
+                        </a>
+                        <a href="tel:+48519724147" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl text-center transition-colors border border-slate-700">
+                            Zadzwoń: +48 519 724 147
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKCJA USŁUGI -->
+        <section id="services" class="py-20 lg:py-28 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Oferta Velaro Clean
+                    </h2>
+                    <p class="mt-4 text-lg text-brand-accent font-medium">
+                        Poznaj nasze usługi dla Warszawy i okolic
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- USŁUGA 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="p-8 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Sprzątanie biur</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Dbamy o czyste, estetyczne i komfortowe miejsce pracy dla Twoich pracowników i klientów. Systematyczna obsługa dopasowana do harmonogramu firmy.
+                                </p>
+                            </div>
+                            <a href="#contact" class="inline-flex items-center text-brand-accent font-bold text-sm hover:underline pt-2">
+                                Zapytaj o usługę &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- USŁUGA 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="p-8 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Sprzątanie magazynów</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Oferujemy regularne i okresowe sprzątanie magazynów oraz centrów logistycznych. Prace możemy wykonywać w godzinach dopasowanych do funkcjonowania magazynu, aby ograniczyć wpływ sprzątania na bieżącą pracę obiektu.
+                                </p>
+                            </div>
+                            <a href="#contact" class="inline-flex items-center text-brand-accent font-bold text-sm hover:underline pt-2">
+                                Zapytaj o usługę &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- USŁUGA 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="p-8 flex-grow flex flex-col justify-between space-y-4">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Sprzątanie jednorazowe i okresowe</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Nie każda firma potrzebuje codziennej obsługi. Realizujemy również usługi: jednorazowe, cotygodniowe, okresowe, sezonowe, po wydarzeniach, przed ważnymi wizytami lub odbiorami obiektu.
+                                </p>
+                            </div>
+                            <a href="#contact" class="inline-flex items-center text-brand-accent font-bold text-sm hover:underline pt-2">
+                                Zapytaj o usługę &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WSPÓŁPRACA (TIMELINE) -->
+        <section id="process" class="py-20 lg:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Jak wygląda współpraca?
+                    </h2>
+                    <p class="mt-4 text-lg text-brand-accent font-medium">
+                        Cztery proste kroki do idealnej czystości
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <span class="text-5xl font-black text-brand-accent/20 block mb-4">01</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Kontakt</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Zadzwoń lub napisz. Przekaż nam podstawowe informacje dotyczące obiektu oraz zakresu usług, którym jesteś zainteresowany.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <span class="text-5xl font-black text-brand-accent/20 block mb-4">02</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Bezpłatna wizja lokalna</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Oglądamy obiekt na terenie Warszawy lub okolic, poznajemy jego specyfikę i wspólnie ustalamy zakres prac. Dzięki temu przygotujemy dokładną ofertę.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <span class="text-5xl font-black text-brand-accent/20 block mb-4">03</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Indywidualna wycena</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Przygotowujemy przejrzystą ofertę w 24h, obejmującą dokładny zakres, częstotliwość i proponowaną organizację usług.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <span class="text-5xl font-black text-brand-accent/20 block mb-4">04</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Rozpoczęcie współpracy</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Po zaakceptowaniu warunków rozpoczynamy realizację usług zgodnie z ustalonym harmonogramem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OSOBNY WĄTEK / SEKCJA: OBSZAR DZIAŁANIA WARSZAWA I OKOLICE -->
+        <section id="location" class="py-20 lg:py-28 bg-slate-900 text-white border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/20 border border-brand-accent/30 text-brand-accent text-xs sm:text-sm font-semibold">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Zasięg usług
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                            Gdzie świadczymy nasze usługi?
+                        </h2>
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                            Baza firmy Velaro Clean mieści się w Nadarzynie, co pozwala nam na szybki i sprawny dojazd do klientów biznesowych oraz indywidualnych w całej aglomeracji warszawskiej.
+                        </p>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Oferujemy bezpłatny dojazd na wizję lokalną oraz elastyczne godziny pracy, dzięki czemu sprzątanie biura lub magazynu nie zakłóca codziennego funkcjonowania Twojego zespołu.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 space-y-3">
+                            <h3 class="text-lg font-bold text-brand-accent flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                Dzielnice Warszawy
+                            </h3>
+                            <ul class="text-slate-300 text-xs space-y-1.5 leading-relaxed">
+                                <li>&bull; Śródmieście, Mokotów, Wola</li>
+                                <li>&bull; Ochota, Ursynów, Wilanów</li>
+                                <li>&bull; Bemowo, Bielany, Żoliborz</li>
+                                <li>&bull; Praga Południe, Praga Północ</li>
+                                <li>&bull; Targówek, Włochy, Ursus</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 space-y-3">
+                            <h3 class="text-lg font-bold text-brand-accent flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                                Okolice Warszawy
+                            </h3>
+                            <ul class="text-slate-300 text-xs space-y-1.5 leading-relaxed">
+                                <li>&bull; Nadarzyn, Pruszków, Piaseczno</li>
+                                <li>&bull; Grodzisk Mazowiecki, Brwinów</li>
+                                <li>&bull; Ożarów Mazowiecki, Raszyn</li>
+                                <li>&bull; Konstancin-Jeziorna, Tarczyn</li>
+                                <li>&bull; oraz pobliskie parki logistyczne</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKCJA SPRZEDAŻOWA -->
+        <section class="bg-brand-navy text-white py-20 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    Twoja firma zasługuje na czyste i profesjonalne otoczenie
+                </h2>
+                <div class="max-w-3xl mx-auto space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+                    <p>
+                        Czysty obiekt wpływa nie tylko na estetykę. To również większy komfort pracowników, lepsze pierwsze wrażenie na klientach oraz bardziej profesjonalny wizerunek firmy.
+                    </p>
+                    <p>
+                        Z Velaro Clean nie musisz organizować sprzątania samodzielnie ani kontrolować każdej wykonanej czynności. Ustalamy zakres, harmonogram i standard, a następnie dbamy o regularną realizację usług w Warszawie i okolicach.
+                    </p>
+                </div>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                        UMÓW BEZPŁATNĄ WIZJĘ LOKALNĄ
+                    </a>
+                    <a href="tel:+48519724147" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl transition-all border border-slate-700">
+                        ZADZWOŃ: +48 519 724 147
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEKCJA KONTAKT I FORMULARZ -->
+        <section id="contact" class="py-20 lg:py-28 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- DANE KONTAKTOWE -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                                Masz pytania lub chcesz umówić wizję lokalną?
+                            </h2>
+                            <p class="mt-4 text-lg text-brand-accent font-medium">
+                                Skontaktuj się z nami.
+                            </p>
+                        </div>
+
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Decydując się na współpracę z nami, zyskujesz partnera, który zapewni czystość Twojego lokalu na najwyższym poziomie. Nie będziesz musiał się martwić o porządek na obiekcie.
+                        </p>
+
+                        <div class="space-y-6 pt-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-brand-accent flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Telefon</div>
+                                    <a href="tel:+48519724147" class="text-xl font-bold text-slate-900 hover:text-brand-accent transition-colors">+48 519 724 147</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-brand-accent flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">E-mail</div>
+                                    <a href="mailto:kontakt@velaroclean.pl" class="text-xl font-bold text-slate-900 hover:text-brand-accent transition-colors">kontakt@velaroclean.pl</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-brand-accent flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Adres i obszar działań</div>
+                                    <div class="text-lg font-bold text-slate-900">ul. Pruszkowska 2a, 05-830 Nadarzyn</div>
+                                    <div class="text-sm text-slate-500">Świadczymy usługi na terenie Warszawy i okolic</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FORMULARZ KONTAKTOWY SKONFIGUROWANY POD E-MAIL -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                            
+                            <!-- KLUCZ KONFIGURACYJNY WEBW3FORMS -->
+                            <input type="hidden" name="access_key" value="TWÓJ_ACCESS_KEY_Z_WEB3FORMS">
+                            <input type="hidden" name="subject" value="Nowe zapytanie z formularza Velaro Clean">
+                            <input type="hidden" name="from_name" value="Velaro Clean Formularz">
+
+                            <div>
+                                <label for="name" class="block text-xs font-bold text-slate-700 uppercase mb-2">Imię i nazwisko *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="Jan Kowalski">
+                            </div>
+
+                            <div>
+                                <label for="company" class="block text-xs font-bold text-slate-700 uppercase mb-2">Nazwa firmy</label>
+                                <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="Nazwa Twojej firmy">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="phone" class="block text-xs font-bold text-slate-700 uppercase mb-2">Numer telefonu *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="+48 000 000 000">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs font-bold text-slate-700 uppercase mb-2">Adres e-mail *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="jan@domena.pl">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="facility" class="block text-xs font-bold text-slate-700 uppercase mb-2">Rodzaj obiektu *</label>
+                                <select id="facility" name="facility" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all bg-white">
+                                    <option value="" disabled selected>Wybierz rodzaj obiektu</option>
+                                    <option value="Biuro">Biuro</option>
+                                    <option value="Magazyn">Magazyn</option>
+                                    <option value="Hala">Hala</option>
+                                    <option value="Obiekt komercyjny">Obiekt komercyjny</option>
+                                    <option value="Inny">Inny</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-bold text-slate-700 uppercase mb-2">Wiadomość *</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="Opisz metraż, oczekiwany zakres prac lub lokalizację obiektu..."></textarea>
+                            </div>
+
+                            <!-- KLAUZULA PRIVACY -->
+                            <div class="space-y-3 pt-2">
+                                <div class="flex items-start gap-3">
+                                    <input type="checkbox" id="privacy-consent" name="privacy-consent" required class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-accent focus:ring-brand-accent">
+                                    <label for="privacy-consent" class="text-xs text-slate-600 leading-normal">
+                                        Zapoznałem/am się z <a href="#privacy-modal" onclick="openPrivacyModal(event)" class="text-brand-accent font-semibold underline">Polityką prywatności</a>. *
+                                    </label>
+                                </div>
+                                <p class="text-[11px] text-slate-400 leading-relaxed">
+                                    Administratorem danych osobowych jest Velaro Clean (Mikołaj Barchacki). Dane podane w formularzu będą przetwarzane w celu obsługi zapytania i kontaktu w sprawie usług.
+                                </p>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full py-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold rounded-xl shadow-md transition-all">
+                                WYŚLIJ ZAPYTANIE
+                            </button>
+                        </form>
+                        <div id="form-success-msg" class="hidden p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-center text-sm font-semibold">
+                            Dziękujemy za przesłanie zapytania! Skontaktujemy się z Tobą w ciągu 24 godzin.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <a href="#" class="inline-block">
+                        <img src="logo-transparent.png" alt="Velaro Clean" class="h-20 w-auto object-contain" loading="lazy">
+                    </a>
+                    <p class="text-xs leading-relaxed">
+                        Zapewniamy profesjonalne usługi sprzątania biur, magazynów i obiektów firmowych na terenie Warszawy i okolic. Dbamy o czystość, estetykę i komfort przestrzeni, tworząc rozwiązania dopasowane do potrzeb każdego klienta.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Szybki kontakt</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li>Telefon: <a href="tel:+48519724147" class="text-white hover:text-brand-accent transition-colors">519 724 147</a></li>
+                        <li>E-mail: <a href="mailto:kontakt@velaroclean.pl" class="text-white hover:text-brand-accent transition-colors">kontakt@velaroclean.pl</a></li>
+                        <li>Adres: ul. Pruszkowska 2a, 05-830 Nadarzyn</li>
+                        <li class="text-brand-accent">Obszar: Warszawa i okolice</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Nawigacja</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-white transition-colors">O nas</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Usługi</a></li>
+                        <li><a href="#process" class="hover:text-white transition-colors">Jak wygląda współpraca?</a></li>
+                        <li><a href="#location" class="hover:text-white transition-colors">Obszar działań</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Dokumenty</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#privacy-modal" onclick="openPrivacyModal(event)" class="hover:text-white transition-colors">Polityka prywatności</a></li>
+                        <li><a href="#cookie-modal" onclick="openCookieModal(event)" class="hover:text-white transition-colors">Polityka cookies</a></li>
+                        <li><button onclick="reopenCookieBanner()" class="hover:text-white transition-colors text-left">Ustawienia cookies</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Velaro Clean. Wszelkie prawa zastrzeżone.</p>
+                <p class="mt-2 sm:mt-0">Działalność nierejestrowana &bull; Warszawa i okolice</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BANER COOKIES -->
+    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-slate-900 border-t border-slate-800 p-4 sm:p-6 text-white z-50 shadow-2xl transition-transform duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-xs sm:text-sm text-slate-300 space-y-1">
+                <p class="font-bold text-white">Dbamy o Twoją prywatność</p>
+                <p>Ta strona wykorzystuje pliki cookies i podobne technologie w celu prawidłowego działania strony oraz, jeśli zostaną skonfigurowane, do analizy ruchu i poprawy jakości usług.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                <button onclick="acceptAllCookies()" class="flex-1 md:flex-none px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold rounded-lg transition-colors">
+                    Akceptuję
+                </button>
+                <button onclick="acceptNecessaryCookies()" class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
+                    Tylko niezbędne
+                </button>
+                <button onclick="openCookieModal(event)" class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
+                    Ustawienia cookies
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL POLITYKA PRYWATNOŚCI -->
+    <div id="privacy-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
+            <div class="flex justify-between items-center border-b pb-4">
+                <h3 class="text-xl font-bold text-slate-900">Polityka Prywatności</h3>
+                <button onclick="closeModal('privacy-modal')" class="text-slate-400 hover:text-slate-700 text-2xl font-bold">&times;</button>
+            </div>
+            
+            <div class="space-y-4">
+                <h4 class="font-bold text-slate-900 text-base">1. Administrator Danych</h4>
+                <p>Administratorem danych osobowych zbieranych za pośrednictwem strony internetowej velaroclean.pl jest <strong>Mikołaj Barchacki</strong>, prowadzący działalność nierejestrowaną pod marką <strong>Velaro Clean</strong>, adres: ul. Pruszkowska 2a, 05-830 Nadarzyn, e-mail: kontakt@velaroclean.pl, tel: +48 519 724 147.</p>
+
+                <h4 class="font-bold text-slate-900 text-base">2. Cele i podstawy przetwarzania danych</h4>
+                <p>Dane osobowe przetwarzane są w celu:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Obsługi zapytań przesłanych przez formularz kontaktowy (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes Administratora).</li>
+                    <li>Przygotowania indywidualnej wyceny i przeprowadzenia bezpłatnej wizji lokalnej w Warszawie i okolicach (art. 6 ust. 1 lit. b RODO – podjęcie działań na żądanie osoby przed zawarciem umowy).</li>
+                </ul>
+
+                <h4 class="font-bold text-slate-900 text-base">3. Odbiorcy danych i przechowywanie</h4>
+                <p>Dane osobowe nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Odbiorcami danych mogą być podmioty świadczące usługi techniczne i organizacyjne na rzecz serwisu (w tym w szczególności dostawcy usług hostingowych, dostawcy poczty elektronicznej oraz podmioty zapewniające wsparcie IT). Podmioty te przetwarzają dane wyłącznie na podstawie umów powierzenia przetwarzania danych osobowych oraz zgodnie z naszymi poleceniami. Dane przechowywane są wyłącznie przez okres niezbędny do obsługi i realizacji zapytania.</p>
+
+                <h4 class="font-bold text-slate-900 text-base">4. Prawa osoby, której dane dotyczą</h4>
+                <p>Użytkownikowi przysługuje prawo dostępu do swoich danych, sprostowania, usunięcia, ograniczenia ich przetwarzania oraz prawo do wniesienia sprzeciwu. W sprawach związanych z danymi osobowymi można kontaktować się pod adresem e-mail: kontakt@velaroclean.pl.</p>
+            </div>
+
+            <div class="border-t pt-4 text-right">
+                <button onclick="closeModal('privacy-modal')" class="px-6 py-2.5 bg-brand-navy text-white font-bold rounded-lg text-xs">Zamknij</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL POLITYKA COOKIES -->
+    <div id="cookie-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
+            <div class="flex justify-between items-center border-b pb-4">
+                <h3 class="text-xl font-bold text-slate-900">Polityka i Ustawienia Cookies</h3>
+                <button onclick="closeModal('cookie-modal')" class="text-slate-400 hover:text-slate-700 text-2xl font-bold">&times;</button>
+            </div>
+
+            <div class="space-y-4">
+                <p>Strona velaroclean.pl stosuje pliki cookies do prawidłowego świadczenia usług. Poniżej możesz dostosować swoje preferencje:</p>
+                
+                <div class="p-4 bg-slate-50 rounded-xl space-y-2 border">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-slate-900">Niezbędne pliki cookies</span>
+                        <input type="checkbox" checked disabled class="h-4 w-4 text-brand-accent">
+                    </div>
+                    <p class="text-xs text-slate-500">Wymagane do prawidłowego działania strony, nawigacji oraz zapamiętania preferencji prywatności.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-xl space-y-2 border">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-slate-900">Cookies analityczne i wydajnościowe</span>
+                        <input type="checkbox" id="cookie-analytics" class="h-4 w-4 text-brand-accent">
+                    </div>
+                    <p class="text-xs text-slate-500">Służą analizie ruchu. Obecnie serwis nie używa aktywnych skryptów śledzących bez Twojej konfiguracji.</p>
+                </div>
+            </div>
+
+            <div class="border-t pt-4 flex justify-end gap-3">
+                <button onclick="saveCookieSettings()" class="px-6 py-2.5 bg-brand-accent text-white font-bold rounded-lg text-xs">Zapisz ustawienia</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKRYPTY JS -->
+    <script>
+        // Hamburger Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Header Shadow Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Hero Slider Crossfade
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        }, 5000);
+
+        // Form Submit Handler (Web3Forms AJAX)
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formData = new FormData(form);
+
+            submitBtn.innerText = "WYSYŁANIE...";
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    form.classList.add('hidden');
+                    document.getElementById('form-success-msg').classList.remove('hidden');
+                } else {
+                    alert("Wystąpił problem z wysłaniem wiadomości. Prosimy o kontakt telefoniczny pod numerem +48 519 724 147.");
+                    submitBtn.innerText = "WYŚLIJ ZAPYTANIE";
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                alert("Wystąpił problem z połączeniem. Prosimy o kontakt pod numerem +48 519 724 147.");
+                submitBtn.innerText = "WYŚLIJ ZAPYTANIE";
+                submitBtn.disabled = false;
+            }
+        }
+
+        // Modals Logic
+        function openPrivacyModal(e) {
+            if(e) e.preventDefault();
+            document.getElementById('privacy-modal').classList.remove('hidden');
+            document.getElementById('privacy-modal').classList.add('flex');
+        }
+
+        function openCookieModal(e) {
+            if(e) e.preventDefault();
+            document.getElementById('cookie-modal').classList.remove('hidden');
+            document.getElementById('cookie-modal').classList.add('flex');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.getElementById(id).classList.remove('flex');
+        }
+
+        // Cookie Banner Handlers
+        function acceptAllCookies() {
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        function acceptNecessaryCookies() {
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        function saveCookieSettings() {
+            closeModal('cookie-modal');
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        function reopenCookieBanner() {
+            document.getElementById('cookie-banner').classList.remove('translate-y-full');
+        }
+    </script>
+</body>
+</html
+
+  <img width="1254" height="1254" alt="logo" src="https://github.com/user-attachments/assets/b79b2106-f93b-44e1-b138-293425bbe9ee" />
+  <img width="1254" height="1254" alt="logo-transparent" src="https://github.com/user-attachments/assets/0cab1cb4-9f3b-46e9-95c6-5ca983cd4c56" />
+
