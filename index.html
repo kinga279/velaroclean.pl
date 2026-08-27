@@ -571,7 +571,9 @@
                             </button>
                         </form>
                         <div id="form-success-msg" class="hidden p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-center text-sm font-semibold">
-                            Dziękujemy za przesłanie zapytania! Skontaktujemy się z Tobą w ciągu 24 godzin.
+                                    Dziękujemy za wiadomość! Skontaktujemy się z Tobą w ciągu 24 godzin.
+                                <br>
+                                <span class="font-normal">Zespół Velaro Clean</span>
                         </div>
                     </div>
                 </div>
@@ -822,5 +824,40 @@
             document.getElementById('cookie-banner').classList.remove('translate-y-full');
         }
     </script>
+    <script>
+            document.getElementById('contact-form').addEventListener('submit', async function(event) {
+                event.preventDefault();
+
+    const form = this;
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success-msg');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'WYSYŁANIE...';
+
+    try {
+        const formData = new FormData(form);
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        } else {
+            throw new Error();
+        }
+
+    } catch (error) {
+        alert('Wystąpił problem z wysłaniem wiadomości. Prosimy o kontakt telefoniczny.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'WYŚLIJ ZAPYTANIE';
+    }
+                        });
+        </script>
 </body>
 </html>
