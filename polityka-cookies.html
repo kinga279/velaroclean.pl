@@ -1,97 +1,305 @@
 <!DOCTYPE html>
 
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polityka cookies | Velaro Clean</title>
-    <meta name="description" content="Polityka cookies strony internetowej Velaro Clean.">
+
+
+<title>Polityka cookies | Velaro Clean</title>
+<meta name="description" content="Polityka cookies strony internetowej Velaro Clean.">
+
+<link rel="icon" type="image/png" href="ikonka.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        navy: '#0F172A',
+                        accent: '#0284C7',
+                        accentHover: '#0369A1',
+                        lightBg: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+
 </head>
 
-<body>
-    <main>
-        <h1>Polityka cookies</h1>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
 
-```
-    <p>Ostatnia aktualizacja: 28 sierpnia 2026 r.</p>
+<!-- HEADER -->
+<header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-    <h2>1. Czym są pliki cookies?</h2>
+        <a href="/" class="flex items-center gap-3">
+            <img
+                src="logo.png"
+                alt="Velaro Clean"
+                class="h-14 sm:h-16 w-auto object-contain"
+            >
+        </a>
 
-    <p>
-        Pliki cookies to niewielkie pliki tekstowe zapisywane na urządzeniu
-        użytkownika podczas korzystania ze strony internetowej. Mogą one służyć
-        między innymi do zapewnienia prawidłowego działania strony oraz
-        zapamiętywania wybranych ustawień.
-    </p>
+        <a
+            href="/"
+            class="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-accent hover:bg-brand-accentHover text-white text-sm font-semibold rounded-lg transition-colors shadow-sm"
+        >
+            <span>←</span>
+            Wróć do strony
+        </a>
 
-    <h2>2. Jakie pliki cookies wykorzystuje strona?</h2>
+    </div>
+</header>
 
-    <p>
-        Strona Velaro Clean może wykorzystywać przede wszystkim niezbędne
-        pliki cookies wymagane do prawidłowego działania strony oraz mechanizmu
-        zarządzania zgodami cookies.
-    </p>
+<!-- HERO DOKUMENTU -->
+<section class="bg-brand-navy text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
 
-    <p>
-        Strona nie wykorzystuje Google Analytics, Google Ads, Meta Pixel,
-        TikTok Pixel, Hotjar ani Microsoft Clarity.
-    </p>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/20 border border-brand-accent/30 text-brand-accent text-xs sm:text-sm font-semibold mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+            Dokument informacyjny
+        </div>
 
-    <h2>3. Cookies niezbędne</h2>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+            Polityka cookies
+        </h1>
 
-    <p>
-        Niezbędne pliki cookies mogą być wykorzystywane do zapewnienia
-        prawidłowego funkcjonowania strony oraz zapamiętania ustawień
-        dotyczących cookies.
-    </p>
+        <p class="mt-4 text-slate-300 text-sm sm:text-base">
+            Informacje dotyczące wykorzystywania plików cookies
+            na stronie internetowej Velaro Clean.
+        </p>
 
-    <p>
-        Tego rodzaju pliki cookies nie służą do tworzenia profilu użytkownika
-        ani prowadzenia reklam behawioralnych.
-    </p>
+        <p class="mt-5 text-xs text-slate-400">
+            Ostatnia aktualizacja: 28 sierpnia 2026 r.
+        </p>
 
-    <h2>4. Zarządzanie plikami cookies</h2>
+    </div>
+</section>
 
-    <p>
-        Użytkownik może zmienić ustawienia dotyczące plików cookies za pomocą
-        dostępnego na stronie mechanizmu ustawień cookies.
-    </p>
+<!-- TREŚĆ -->
+<main class="flex-grow py-12 sm:py-16">
 
-    <p>
-        Użytkownik może również zmienić ustawienia cookies w swojej
-        przeglądarce internetowej. Wyłączenie niektórych plików cookies może
-        jednak wpłynąć na prawidłowe działanie wybranych elementów strony.
-    </p>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <h2>5. Zewnętrzni dostawcy</h2>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 
-    <p>
-        Strona może korzystać z usług zewnętrznych dostawców technicznych,
-        których infrastruktura może powodować przetwarzanie określonych
-        informacji technicznych, takich jak adres IP, dane urządzenia lub
-        informacje dotyczące połączenia.
-    </p>
+            <div class="p-6 sm:p-10 lg:p-12">
 
-    <h2>6. Zmiany w polityce cookies</h2>
+                <div class="space-y-10">
 
-    <p>
-        Polityka cookies może być okresowo aktualizowana w przypadku zmian
-        technologicznych, prawnych lub funkcjonalnych strony.
-    </p>
+                    <!-- 1 -->
+                    <section>
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                1
+                            </span>
+                            Czym są pliki cookies?
+                        </h2>
 
-    <h2>7. Kontakt</h2>
+                        <p class="mt-4 text-slate-600 leading-7">
+                            Pliki cookies to niewielkie pliki tekstowe zapisywane na urządzeniu
+                            użytkownika podczas korzystania ze strony internetowej. Mogą one służyć
+                            między innymi do zapewnienia prawidłowego działania strony oraz
+                            zapamiętywania wybranych ustawień.
+                        </p>
+                    </section>
 
-    <p>
-        W przypadku pytań dotyczących plików cookies można skontaktować się
-        pod adresem:
-        <a href="mailto:kontakt@velaroclean.pl">kontakt@velaroclean.pl</a>
-    </p>
+                    <!-- 2 -->
+                    <section class="border-t border-slate-100 pt-10">
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                2
+                            </span>
+                            Jakie pliki cookies wykorzystuje strona?
+                        </h2>
 
-    <p>
-        <a href="/">← Powrót do strony głównej</a>
-    </p>
+                        <div class="mt-4 space-y-4 text-slate-600 leading-7">
+                            <p>
+                                Strona Velaro Clean może wykorzystywać przede wszystkim niezbędne
+                                pliki cookies wymagane do prawidłowego działania strony oraz mechanizmu
+                                zarządzania zgodami cookies.
+                            </p>
+
+                            <p>
+                                Strona nie wykorzystuje Google Analytics, Google Ads, Meta Pixel,
+                                TikTok Pixel, Hotjar ani Microsoft Clarity.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 3 -->
+                    <section class="border-t border-slate-100 pt-10">
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                3
+                            </span>
+                            Cookies niezbędne
+                        </h2>
+
+                        <div class="mt-4 space-y-4 text-slate-600 leading-7">
+                            <p>
+                                Niezbędne pliki cookies mogą być wykorzystywane do zapewnienia
+                                prawidłowego funkcjonowania strony oraz zapamiętania ustawień
+                                dotyczących cookies.
+                            </p>
+
+                            <p>
+                                Tego rodzaju pliki cookies nie służą do tworzenia profilu użytkownika
+                                ani prowadzenia reklam behawioralnych.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 4 -->
+                    <section class="border-t border-slate-100 pt-10">
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                4
+                            </span>
+                            Zarządzanie plikami cookies
+                        </h2>
+
+                        <div class="mt-4 space-y-4 text-slate-600 leading-7">
+                            <p>
+                                Użytkownik może zmienić ustawienia dotyczące plików cookies za pomocą
+                                dostępnego na stronie mechanizmu ustawień cookies.
+                            </p>
+
+                            <p>
+                                Użytkownik może również zmienić ustawienia cookies w swojej
+                                przeglądarce internetowej. Wyłączenie niektórych plików cookies może
+                                jednak wpłynąć na prawidłowe działanie wybranych elementów strony.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 5 -->
+                    <section class="border-t border-slate-100 pt-10">
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                5
+                            </span>
+                            Zewnętrzni dostawcy
+                        </h2>
+
+                        <p class="mt-4 text-slate-600 leading-7">
+                            Strona może korzystać z usług zewnętrznych dostawców technicznych,
+                            których infrastruktura może powodować przetwarzanie określonych informacji
+                            technicznych, takich jak adres IP, dane urządzenia lub informacje dotyczące
+                            połączenia.
+                        </p>
+                    </section>
+
+                    <!-- 6 -->
+                    <section class="border-t border-slate-100 pt-10">
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                6
+                            </span>
+                            Zmiany w polityce cookies
+                        </h2>
+
+                        <p class="mt-4 text-slate-600 leading-7">
+                            Polityka cookies może być okresowo aktualizowana w przypadku zmian
+                            technologicznych, prawnych lub funkcjonalnych strony.
+                        </p>
+                    </section>
+
+                    <!-- 7 -->
+                    <section class="border-t border-slate-100 pt-10">
+                        <h2 class="flex items-center gap-3 text-xl sm:text-2xl font-bold text-slate-900">
+                            <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-sm font-bold">
+                                7
+                            </span>
+                            Kontakt
+                        </h2>
+
+                        <p class="mt-4 text-slate-600 leading-7">
+                            W przypadku pytań dotyczących plików cookies można skontaktować się
+                            pod adresem:
+                        </p>
+
+                        <a
+                            href="mailto:kontakt@velaroclean.pl"
+                            class="inline-block mt-3 text-brand-accent font-semibold hover:text-brand-accentHover underline underline-offset-2"
+                        >
+                            kontakt@velaroclean.pl
+                        </a>
+                    </section>
+
+                </div>
+
+                <!-- POWRÓT -->
+                <div class="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+                    <p class="text-xs text-slate-400">
+                        Velaro Clean • Warszawa i okolice
+                    </p>
+
+                    <a
+                        href="/"
+                        class="inline-flex items-center justify-center px-6 py-3 bg-brand-navy hover:bg-slate-800 text-white font-semibold rounded-lg transition-colors"
+                    >
+                        ← Powrót do strony głównej
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 </main>
-```
+
+<!-- FOOTER -->
+<footer class="bg-brand-navy text-slate-400 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+            <div class="flex items-center gap-4">
+                <img
+                    src="logo 2 .png"
+                    alt="Velaro Clean"
+                    class="h-14 w-auto object-contain"
+                >
+
+                <div class="text-xs leading-relaxed">
+                    <p class="text-white font-semibold">
+                        Velaro Clean
+                    </p>
+                    <p>
+                        Profesjonalne sprzątanie
+                        Warszawa i okolice
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-xs text-center md:text-right">
+                <p>
+                    © 2026 Velaro Clean. Wszelkie prawa zastrzeżone.
+                </p>
+
+                <a
+                    href="mailto:kontakt@velaroclean.pl"
+                    class="inline-block mt-1 text-slate-400 hover:text-white transition-colors"
+                >
+                    kontakt@velaroclean.pl
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
 
 </body>
 </html>
