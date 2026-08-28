@@ -514,7 +514,17 @@
                             <input type="hidden" name="access_key" value="9e9e9a81-6202-4df9-809f-db7ae06d2f79">
                             <input type="hidden" name="subject" value="Nowe zapytanie z formularza Velaro Clean">
                             <input type="hidden" name="from_name" value="Velaro Clean Formularz">
-
+                                <!-- UKRYTE POLE ANTYSPAM -->
+                                <div class="hidden" aria-hidden="true">
+                                    <label for="website">Nie wypełniaj tego pola</label>
+                                    <input
+                                        type="text"
+                                        id="website"
+                                        name="website"
+                                        tabindex="-1"
+                                        autocomplete="off"
+                                    >
+                                </div>
                             <div>
                                 <label for="name" class="block text-xs font-bold text-slate-700 uppercase mb-2">Imię i nazwisko *</label>
                                 <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="Jan Kowalski">
@@ -553,29 +563,91 @@
                                 <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all" placeholder="Opisz metraż, oczekiwany zakres prac lub lokalizację obiektu..."></textarea>
                             </div>
 
-                            <!-- KLAUZULA PRIVACY -->
-                            <div class="space-y-3 pt-2">
-                                <div class="flex items-start gap-3">
-                                    <input type="checkbox" id="privacy-consent" name="privacy-consent" required class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-accent focus:ring-brand-accent">
-                                    <label for="privacy-consent" class="text-xs text-slate-600 leading-normal">
-                                        Zapoznałem/am się z <a href="#privacy-modal" onclick="openPrivacyModal(event)" class="text-brand-accent font-semibold underline">Polityką prywatności</a>. *
-                                    </label>
-                                </div>
-                                <p class="text-[11px] text-slate-400 leading-relaxed">
-                                    Administratorem danych osobowych jest Velaro Clean (Mikołaj Barchacki). Dane podane w formularzu będą przetwarzane w celu obsługi zapytania i kontaktu w sprawie usług.
-                                </p>
-                            </div>
+          <!-- INFORMACJA O PRZETWARZANIU DANYCH -->
 
-                            <button type="submit" id="submit-btn" class="w-full py-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold rounded-xl shadow-md transition-all">
-                                WYŚLIJ ZAPYTANIE
-                            </button>
-                        </form>
-                        <div id="form-success-msg" class="hidden p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-center text-sm font-semibold">
-                                    Dziękujemy za wiadomość! Skontaktujemy się z Tobą w ciągu 24 godzin.
-                                <br>
-                                <span class="font-normal">Zespół Velaro Clean</span>
+<div class="pt-2">
+    <p class="text-[11px] text-slate-400 leading-relaxed">
+        Administratorem Twoich danych osobowych jest
+        <strong>Mikołaj Barchacki</strong>, działający pod marką
+<strong>Velaro Clean</strong>, ul. Pruszkowska 2a,
+05-830 Nadarzyn.
+
+
+    Dane podane w formularzu będą przetwarzane w celu odpowiedzi na
+    wiadomość, przygotowania oferty, wyceny lub organizacji wizji lokalnej,
+    a także – w razie potrzeby – w celu podjęcia działań zmierzających
+    do zawarcia umowy oraz ochrony przed ewentualnymi roszczeniami.
+
+    Szczegółowe informacje dotyczące przetwarzania danych osobowych,
+    w tym podstawy prawne przetwarzania, odbiorców danych, okresu ich
+    przechowywania oraz przysługujących Ci praw, znajdują się w
+    <a href="#privacy-modal"
+       onclick="openPrivacyModal(event)"
+       class="text-brand-accent font-semibold underline">
+        Polityce prywatności
+    </a>.
+</p>
+</div>
+
+   <!-- POTWIERDZENIE ZAPOZNANIA SIĘ Z POLITYKĄ PRYWATNOŚCI -->
+
+<div class="flex items-start gap-3">
+    <input
+        type="checkbox"
+        id="privacy-consent"
+        name="privacy_acknowledgement"
+        value="Zapoznałem/am się z Polityką prywatności"
+        required
+        class="mt-1 w-4 h-4 rounded border-slate-300 text-brand-accent focus:ring-brand-accent"
+    >
+
+
+<label
+    for="privacy-consent"
+    class="text-xs text-slate-600 leading-relaxed"
+>
+    Potwierdzam, że zapoznałem/am się z
+    <a
+        href="#privacy-modal"
+        onclick="openPrivacyModal(event)"
+        class="text-brand-accent font-semibold underline"
+    >
+        Polityką prywatności
+    </a>.
+    *
+</label>
+</div>
+
+
+<!-- PRZYCISK WYSŁANIA -->
+<button
+    type="submit"
+    id="submit-btn"
+    class="w-full px-6 py-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold rounded-xl shadow-lg transition-all"
+>
+    WYŚLIJ ZAPYTANIE
+</button>
+
+<!-- KOMUNIKAT O SUKCESIE -->
+<div
+    id="form-success-msg"
+    class="hidden text-center py-8"
+>
+    <div class="w-14 h-14 mx-auto mb-4 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+        ✓
+    </div>
+
+    <h3 class="text-xl font-bold text-slate-900">
+        Wiadomość została wysłana
+    </h3>
+
+    <p class="mt-2 text-sm text-slate-500">
+        Dziękujemy za kontakt. Odpowiemy najszybciej, jak to możliwe.
+    </p>
+</div>
+
+</form>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -618,9 +690,19 @@
                 <div class="space-y-3">
                     <h4 class="text-sm font-bold text-white uppercase tracking-wider">Dokumenty</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="#privacy-modal" onclick="openPrivacyModal(event)" class="hover:text-white transition-colors">Polityka prywatności</a></li>
-                        <li><a href="#cookie-modal" onclick="openCookieModal(event)" class="hover:text-white transition-colors">Polityka cookies</a></li>
-                        <li><button onclick="reopenCookieBanner()" class="hover:text-white transition-colors text-left">Ustawienia cookies</button></li>
+                        <li>
+    <a href="/polityka-prywatnosci.html" class="hover:text-white transition-colors">
+        Polityka prywatności
+    </a>
+</li>
+                        <li>
+    <a href="/polityka-cookies.html" class="hover:text-white transition-colors">
+        Polityka cookies
+    </a>
+</li>
+                        <li><button onclick="reopenCookieBanner()" class="hover:text-white transition-colors text-left">Ustawienia cookies 
+                        </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -632,93 +714,391 @@
         </div>
     </footer>
 
-    <!-- BANER COOKIES -->
-    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-slate-900 border-t border-slate-800 p-4 sm:p-6 text-white z-50 shadow-2xl transition-transform duration-300">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="text-xs sm:text-sm text-slate-300 space-y-1">
-                <p class="font-bold text-white">Dbamy o Twoją prywatność</p>
-                <p>Ta strona wykorzystuje pliki cookies i podobne technologie w celu prawidłowego działania strony oraz, jeśli zostaną skonfigurowane, do analizy ruchu i poprawy jakości usług.</p>
-            </div>
-            <div class="flex flex-wrap gap-2 w-full md:w-auto">
-                <button onclick="acceptAllCookies()" class="flex-1 md:flex-none px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold rounded-lg transition-colors">
-                    Akceptuję
-                </button>
-                <button onclick="acceptNecessaryCookies()" class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
-                    Tylko niezbędne
-                </button>
-                <button onclick="openCookieModal(event)" class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
-                    Ustawienia cookies
-                </button>
-            </div>
+  <!-- BANER COOKIES -->
+<div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-slate-900 border-t border-slate-800 p-4 sm:p-6 text-white z-50 shadow-2xl transition-transform duration-300">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <div class="text-xs sm:text-sm text-slate-300 space-y-1">
+            <p class="font-bold text-white">Dbamy o Twoją prywatność</p>
+            <p>
+                Ta strona wykorzystuje wyłącznie niezbędne pliki cookies
+                i podobne mechanizmy wymagane do prawidłowego działania serwisu
+                oraz zapamiętania ustawień prywatności.
+                Szczegóły znajdziesz w
+                <a href="#cookie-modal"
+                   onclick="openCookieModal(event)"
+                   class="text-white font-semibold underline">
+                    Polityce cookies
+                </a>.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2 w-full md:w-auto">
+            <button
+                onclick="acceptNecessaryCookies()"
+                class="flex-1 md:flex-none px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold rounded-lg transition-colors">
+                Rozumiem
+            </button>
+
+            <button
+                onclick="openCookieModal(event)"
+                class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
+                Ustawienia cookies
+            </button>
         </div>
     </div>
-
+</div>
     <!-- MODAL POLITYKA PRYWATNOŚCI -->
-    <div id="privacy-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
-            <div class="flex justify-between items-center border-b pb-4">
-                <h3 class="text-xl font-bold text-slate-900">Polityka Prywatności</h3>
-                <button onclick="closeModal('privacy-modal')" class="text-slate-400 hover:text-slate-700 text-2xl font-bold">&times;</button>
-            </div>
-            
-            <div class="space-y-4">
-                <h4 class="font-bold text-slate-900 text-base">1. Administrator Danych</h4>
-                <p>Administratorem danych osobowych zbieranych za pośrednictwem strony internetowej velaroclean.pl jest <strong>Mikołaj Barchacki</strong>, prowadzący działalność nierejestrowaną pod marką <strong>Velaro Clean</strong>, adres: ul. Pruszkowska 2a, 05-830 Nadarzyn, e-mail: kontakt@velaroclean.pl, tel: +48 519 724 147.</p>
+<div id="privacy-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
 
-                <h4 class="font-bold text-slate-900 text-base">2. Cele i podstawy przetwarzania danych</h4>
-                <p>Dane osobowe przetwarzane są w celu:</p>
-                <ul class="list-disc pl-5 space-y-1">
-                    <li>Obsługi zapytań przesłanych przez formularz kontaktowy (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes Administratora).</li>
-                    <li>Przygotowania indywidualnej wyceny i przeprowadzenia bezpłatnej wizji lokalnej w Warszawie i okolicach (art. 6 ust. 1 lit. b RODO – podjęcie działań na żądanie osoby przed zawarciem umowy).</li>
+        <div class="flex justify-between items-center border-b pb-4">
+            <h3 class="text-xl font-bold text-slate-900">Polityka Prywatności</h3>
+            <button
+                onclick="closeModal('privacy-modal')"
+                class="text-slate-400 hover:text-slate-700 text-2xl font-bold"
+                aria-label="Zamknij">
+                &times;
+            </button>
+        </div>
+
+        <div class="space-y-5">
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    1. Administrator danych osobowych
+                </h4>
+                <p class="mt-2">
+                    Administratorem danych osobowych przetwarzanych za pośrednictwem
+                    strony internetowej velaroclean.pl jest
+                    <strong>Mikołaj Barchacki</strong>, prowadzący działalność
+                    nierejestrowaną pod marką <strong>Velaro Clean</strong>,
+                    ul. Pruszkowska 2a, 05-830 Nadarzyn.
+                </p>
+                <p class="mt-2">
+                    Kontakt z Administratorem jest możliwy pod adresem:
+                    <a href="mailto:kontakt@velaroclean.pl"
+                       class="text-brand-accent font-semibold underline">
+                        kontakt@velaroclean.pl
+                    </a>
+                    lub telefonicznie: +48 519 724 147.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    2. Jakie dane mogą być przetwarzane?
+                </h4>
+                <p class="mt-2">
+                    Za pośrednictwem formularza kontaktowego mogą być przetwarzane
+                    dane podane przez użytkownika, w szczególności:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 mt-2">
+                    <li>imię i nazwisko,</li>
+                    <li>nazwa firmy,</li>
+                    <li>numer telefonu,</li>
+                    <li>adres e-mail,</li>
+                    <li>informacje dotyczące rodzaju obiektu,</li>
+                    <li>treść wiadomości oraz inne informacje dobrowolnie przekazane przez użytkownika.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    3. Cele i podstawy prawne przetwarzania
+                </h4>
+                <p class="mt-2">
+                    Dane osobowe są przetwarzane w szczególności w celu:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 mt-2">
+                    <li>
+                        udzielenia odpowiedzi na zapytanie przesłane przez formularz
+                        kontaktowy;
+                    </li>
+                    <li>
+                        przygotowania oferty, wyceny oraz organizacji wizji lokalnej
+                        na żądanie użytkownika;
+                    </li>
+                    <li>
+                        podjęcia działań zmierzających do zawarcia umowy,
+                        jeżeli użytkownik jest zainteresowany skorzystaniem z usług;
+                    </li>
+                    <li>
+                        ewentualnego ustalenia, dochodzenia lub obrony roszczeń.
+                    </li>
                 </ul>
 
-                <h4 class="font-bold text-slate-900 text-base">3. Odbiorcy danych i przechowywanie</h4>
-                <p>Dane osobowe nie są sprzedawane ani przekazywane podmiotom trzecim w celach marketingowych. Odbiorcami danych mogą być podmioty świadczące usługi techniczne i organizacyjne na rzecz serwisu (w tym w szczególności dostawcy usług hostingowych, dostawcy poczty elektronicznej oraz podmioty zapewniające wsparcie IT). Podmioty te przetwarzają dane wyłącznie na podstawie umów powierzenia przetwarzania danych osobowych oraz zgodnie z naszymi poleceniami. Dane przechowywane są wyłącznie przez okres niezbędny do obsługi i realizacji zapytania.</p>
+                <p class="mt-3">
+                   Podstawą prawną przetwarzania danych może być:
 
-                <h4 class="font-bold text-slate-900 text-base">4. Prawa osoby, której dane dotyczą</h4>
-                <p>Użytkownikowi przysługuje prawo dostępu do swoich danych, sprostowania, usunięcia, ograniczenia ich przetwarzania oraz prawo do wniesienia sprzeciwu. W sprawach związanych z danymi osobowymi można kontaktować się pod adresem e-mail: kontakt@velaroclean.pl.</p>
+* art. 6 ust. 1 lit. b RODO – w zakresie niezbędnym do podjęcia na żądanie użytkownika działań przed zawarciem umowy, w szczególności w celu przygotowania oferty, wyceny lub organizacji wizji lokalnej;
+
+* art. 6 ust. 1 lit. f RODO – w zakresie niezbędnym do realizacji prawnie uzasadnionych interesów Administratora, w szczególności związanych z prowadzeniem korespondencji, zapewnieniem bezpieczeństwa serwisu oraz ustaleniem, dochodzeniem lub obroną przed ewentualnymi roszczeniami.
+
+                </p>
             </div>
 
-            <div class="border-t pt-4 text-right">
-                <button onclick="closeModal('privacy-modal')" class="px-6 py-2.5 bg-brand-navy text-white font-bold rounded-lg text-xs">Zamknij</button>
+           <div>
+    <h4 class="font-bold text-slate-900 text-base">
+        4. Odbiorcy danych
+    </h4>
+
+    <p class="mt-2">
+        W związku z funkcjonowaniem strony internetowej i formularza kontaktowego
+        dane osobowe mogą być przekazywane podmiotom świadczącym usługi techniczne
+        i organizacyjne na rzecz Administratora.
+    </p>
+
+    <p class="mt-2">
+        W szczególności formularz kontaktowy korzysta z usługi
+        <strong>Web3Forms</strong>, która pośredniczy w przekazywaniu zgłoszeń
+        z formularza na adres e-mail Administratora.
+    </p>
+
+    <p class="mt-2">
+        Dane przesyłane za pośrednictwem formularza mogą być przetwarzane przez Web3Forms w zakresie niezbędnym do obsługi i przekazania zgłoszenia. 
+        Szczegółowe zasady dotyczące przetwarzania danych przez ten podmiot wynikają z jego aktualnych warunków świadczenia usług oraz dokumentów dotyczących prywatności.
+
+    </p>
+
+    <p class="mt-2">
+        Dane mogą być również przekazywane dostawcom hostingu, poczty
+        elektronicznej oraz usług technicznych i informatycznych, jeżeli jest to
+        niezbędne do prawidłowego funkcjonowania serwisu i obsługi zapytań.
+    </p>
+
+    <p class="mt-2">
+        Dane nie są sprzedawane ani udostępniane podmiotom trzecim w celach
+        marketingowych bez odpowiedniej podstawy prawnej.
+    </p>
+</div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    5. Okres przechowywania danych
+                </h4>
+                <p class="mt-2">
+                    Dane osobowe będą przechowywane przez okres niezbędny do obsługi przesłanego zapytania oraz prowadzenia związanej z nim korespondencji.
+                    Jeżeli w wyniku kontaktu dojdzie do podjęcia działań zmierzających do zawarcia umowy lub do zawarcia umowy, dane mogą być przechowywane przez okres niezbędny do
+                    realizacji tych działań, wykonania umowy oraz spełnienia obowiązków wynikających z przepisów prawa.
+                    Dane mogą być również przechowywane przez okres niezbędny do ustalenia, dochodzenia lub obrony przed ewentualnymi roszczeniami, zgodnie z obowiązującymi przepisami.
+
+                </p>
             </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    6. Prawa użytkownika
+                </h4>
+                <p class="mt-2">
+                    Osobie, której dane dotyczą, przysługują – w zakresie określonym przepisami RODO – następujące prawa:
+                </p>
+<ul class="list-disc pl-5 space-y-1 mt-2">
+    <li>prawo dostępu do swoich danych osobowych;</li>
+    <li>prawo do sprostowania nieprawidłowych lub uzupełnienia niekompletnych danych;</li>
+    <li>prawo do usunięcia danych, jeżeli zachodzą przesłanki określone w RODO;</li>
+    <li>prawo do ograniczenia przetwarzania danych;</li>
+    <li>prawo do wniesienia sprzeciwu wobec przetwarzania danych opartego na art. 6 ust. 1 lit. f RODO;</li>
+    <li>prawo do przenoszenia danych, jeżeli przetwarzanie odbywa się w sposób spełniający warunki określone w RODO;</li>
+    <li>prawo do cofnięcia zgody w przypadku, gdy przetwarzanie danych odbywa się na podstawie zgody.</li>
+</ul>
+
+<p class="mt-3">
+W celu skorzystania z przysługujących praw można skontaktować się z Administratorem
+pod adresem e-mail:
+<a href="mailto:kontakt@velaroclean.pl"
+   class="text-brand-accent font-semibold underline">
+    kontakt@velaroclean.pl
+</a>.
+</p>
+
+<p class="mt-3">
+Administrator rozpatruje żądania dotyczące praw osób, których dane dotyczą,
+zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
+</p>
+
+             
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    7. Prawo do wniesienia skargi
+                </h4>
+              <p class="mt-2">
+    Jeżeli użytkownik uzna, że jego dane osobowe są przetwarzane
+    niezgodnie z przepisami o ochronie danych osobowych, ma prawo
+    wnieść skargę do właściwego organu nadzorczego, w szczególności
+    do Prezesa Urzędu Ochrony Danych Osobowych (UODO).
+
+    Dane kontaktowe organu nadzorczego są dostępne na stronie:
+    <a href="https://uodo.gov.pl"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="text-brand-accent font-semibold underline">
+        uodo.gov.pl
+    </a>.
+</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    8. Dobrowolność podania danych
+                </h4>
+                <p class="mt-2">
+                    Podanie danych w formularzu kontaktowym jest dobrowolne, jednak
+                    podanie danych oznaczonych jako wymagane jest niezbędne do
+                    obsługi zapytania i udzielenia odpowiedzi.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    9. Zautomatyzowane podejmowanie decyzji
+                </h4>
+                <p class="mt-2">
+                    Dane użytkowników nie są wykorzystywane do podejmowania decyzji
+                    wywołujących wobec nich skutki prawne lub w podobny sposób
+                    istotnie na nich wpływających w sposób wyłącznie zautomatyzowany.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 text-base">
+                    10. Zmiany Polityki Prywatności
+                </h4>
+                <p class="mt-2">
+                    Polityka Prywatności może być aktualizowana w przypadku zmian
+                    w sposobie funkcjonowania strony, sposobie przetwarzania danych
+                    lub obowiązujących przepisach prawa.
+                </p>
+            </div>
+
+            <div class="pt-2 border-t">
+                <p class="text-xs text-slate-500">
+                    Ostatnia aktualizacja: 28 sierpnia 2026 r.
+                </p>
+            </div>
+
         </div>
-    </div>
 
-    <!-- MODAL POLITYKA COOKIES -->
-    <div id="cookie-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
-            <div class="flex justify-between items-center border-b pb-4">
-                <h3 class="text-xl font-bold text-slate-900">Polityka i Ustawienia Cookies</h3>
-                <button onclick="closeModal('cookie-modal')" class="text-slate-400 hover:text-slate-700 text-2xl font-bold">&times;</button>
-            </div>
-
-            <div class="space-y-4">
-                <p>Strona velaroclean.pl stosuje pliki cookies do prawidłowego świadczenia usług. Poniżej możesz dostosować swoje preferencje:</p>
-                
-                <div class="p-4 bg-slate-50 rounded-xl space-y-2 border">
-                    <div class="flex items-center justify-between">
-                        <span class="font-bold text-slate-900">Niezbędne pliki cookies</span>
-                        <input type="checkbox" checked disabled class="h-4 w-4 text-brand-accent">
-                    </div>
-                    <p class="text-xs text-slate-500">Wymagane do prawidłowego działania strony, nawigacji oraz zapamiętania preferencji prywatności.</p>
-                </div>
-
-                <div class="p-4 bg-slate-50 rounded-xl space-y-2 border">
-                    <div class="flex items-center justify-between">
-                        <span class="font-bold text-slate-900">Cookies analityczne i wydajnościowe</span>
-                        <input type="checkbox" id="cookie-analytics" class="h-4 w-4 text-brand-accent">
-                    </div>
-                    <p class="text-xs text-slate-500">Służą analizie ruchu. Obecnie serwis nie używa aktywnych skryptów śledzących bez Twojej konfiguracji.</p>
-                </div>
-            </div>
-
-            <div class="border-t pt-4 flex justify-end gap-3">
-                <button onclick="saveCookieSettings()" class="px-6 py-2.5 bg-brand-accent text-white font-bold rounded-lg text-xs">Zapisz ustawienia</button>
-            </div>
+        <div class="border-t pt-4 text-right">
+            <button
+                onclick="closeModal('privacy-modal')"
+                class="px-6 py-2.5 bg-brand-navy text-white font-bold rounded-lg text-xs">
+                Zamknij
+            </button>
         </div>
-    </div>
 
+    </div>
+</div>
+
+   <!-- MODAL POLITYKA COOKIES -->
+<div id="cookie-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
+
+        <div class="flex justify-between items-center border-b pb-4">
+            <h3 class="text-xl font-bold text-slate-900">Polityka Cookies</h3>
+            <button
+                onclick="closeModal('cookie-modal')"
+                class="text-slate-400 hover:text-slate-700 text-2xl font-bold"
+                aria-label="Zamknij">
+                &times;
+            </button>
+        </div>
+
+        <div class="space-y-5">
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-2">
+                    1. Czym są pliki cookies?
+                </h4>
+                <p>
+                    Pliki cookies to niewielkie pliki tekstowe zapisywane na urządzeniu
+                    użytkownika podczas korzystania ze strony internetowej. Mogą one
+                    służyć między innymi do zapewnienia prawidłowego działania strony
+                    oraz zapamiętywania wybranych ustawień.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-2">
+                    2. Jakie mechanizmy wykorzystuje strona?
+                </h4>
+          <p>
+    Strona Velaro Clean nie wykorzystuje obecnie narzędzi analitycznych,
+    reklamowych ani marketingowych, takich jak Google Analytics,
+    Google Ads, Meta Pixel, TikTok Pixel, Hotjar czy Microsoft Clarity.
+</p>
+
+<p class="mt-2">
+    Strona nie wykorzystuje obecnie nieobowiązkowych plików cookies
+    służących do analizy zachowania użytkowników, personalizacji reklam
+    ani prowadzenia działań marketingowych.
+</p>
+
+<p class="mt-2">
+   <p class="mt-2">
+    Formularz kontaktowy korzysta z zewnętrznej usługi Web3Forms,
+    która umożliwia przesłanie wiadomości na adres e-mail Velaro Clean.
+    Dane podane w formularzu są przekazywane za pośrednictwem tej usługi
+    w celu obsługi zapytania kontaktowego. Szczegółowe informacje dotyczące
+    przetwarzania danych osobowych znajdują się w Polityce Prywatności.
+</p>
+
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-2">
+                    3. Niezbędne mechanizmy
+                </h4>
+                <p>
+                    Strona może korzystać z niezbędnych mechanizmów technicznych
+                    wymaganych do jej prawidłowego działania oraz do zapamiętania
+                    ustawień dotyczących prywatności.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-2">
+                    4. Zarządzanie cookies
+                </h4>
+                <p>
+                    Użytkownik może również zmienić ustawienia dotyczące plików cookies
+                    za pomocą ustawień swojej przeglądarki internetowej. Wyłączenie
+                    niektórych mechanizmów technicznych może wpłynąć na prawidłowe
+                    działanie strony.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-900 mb-2">
+                    5. Zmiany Polityki Cookies
+                </h4>
+                <p>
+                    Polityka Cookies może być aktualizowana w przypadku zmiany sposobu
+                    działania strony, wykorzystywanych technologii lub obowiązujących
+                    przepisów.
+                </p>
+            </div>
+
+            <div class="pt-2 border-t">
+                <p class="text-xs text-slate-500">
+                    Ostatnia aktualizacja: 28 sierpnia 2026 r.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="border-t pt-4 flex justify-end">
+            <button
+                onclick="saveCookieSettings()"
+                class="px-6 py-2.5 bg-brand-accent text-white font-bold rounded-lg text-xs">
+                Zamknij i zapisz
+            </button>
+        </div>
+
+    </div>
+</div>
     <!-- SKRYPTY JS -->
     <script>
         // Hamburger Menu Toggle
@@ -778,28 +1158,45 @@
             document.getElementById(id).classList.remove('flex');
         }
 
-        // Cookie Banner Handlers
-        function acceptAllCookies() {
-            document.getElementById('cookie-banner').classList.add('translate-y-full');
-        }
+      // Cookie Banner Handlers
+function hideCookieBanner() {
+    document.getElementById('cookie-banner').classList.add('translate-y-full');
+}
 
-        function acceptNecessaryCookies() {
-            document.getElementById('cookie-banner').classList.add('translate-y-full');
-        }
 
-        function saveCookieSettings() {
-            closeModal('cookie-modal');
-            document.getElementById('cookie-banner').classList.add('translate-y-full');
-        }
+function acceptNecessaryCookies() {
+    localStorage.setItem('velaro_cookie_consent', 'necessary');
+    hideCookieBanner();
+}
 
-        function reopenCookieBanner() {
-            document.getElementById('cookie-banner').classList.remove('translate-y-full');
-        }
+function saveCookieSettings() {
+    localStorage.setItem('velaro_cookie_consent', 'necessary');
+    closeModal('cookie-modal');
+    hideCookieBanner();
+}
+
+function reopenCookieBanner() {
+    document.getElementById('cookie-banner').classList.remove('translate-y-full');
+}
+
+// Sprawdzenie, czy użytkownik wcześniej wybrał ustawienia cookies
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsent = localStorage.getItem('velaro_cookie_consent');
+
+    if (cookieConsent) {
+        hideCookieBanner();
+    }
+});
     </script>
     <script>
             document.getElementById('contact-form').addEventListener('submit', async function(event) {
                 event.preventDefault();
-
+                // ZABEZPIECZENIE ANTYSPAM (HONEYPOT)
+                const honeypot = document.getElementById('website');
+            
+                if (honeypot && honeypot.value.trim() !== '') {
+                    return;
+                }
     const form = this;
     const submitBtn = document.getElementById('submit-btn');
     const successMsg = document.getElementById('form-success-msg');
