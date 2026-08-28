@@ -1,422 +1,392 @@
 <!DOCTYPE html>
-
-<html lang="pl" class="scroll-smooth">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Polityka prywatności | Velaro Clean</title>
-<meta name="description" content="Polityka prywatności Velaro Clean. Informacje dotyczące przetwarzania danych osobowych.">
+    <title>Polityka prywatności | Velaro Clean</title>
 
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    <meta
+        name="description"
+        content="Polityka prywatności Velaro Clean. Informacje dotyczące przetwarzania danych osobowych."
+    >
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    body {
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-            "Segoe UI", sans-serif;
-        background: #f8fafc;
-        color: #334155;
-        line-height: 1.75;
-    }
-
-    header {
-        background: #0f172a;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .header-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .logo {
-        color: white;
-        text-decoration: none;
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-    }
-
-    .logo span {
-        color: #0284c7;
-    }
-
-    .back-link {
-        color: #cbd5e1;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .back-link:hover {
-        color: white;
-    }
-
-    .hero {
-        background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
-        padding: 72px 24px 80px;
-        color: white;
-    }
-
-    .hero-inner {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: #7dd3fc;
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 18px;
-    }
-
-    .eyebrow::before {
-        content: "";
-        width: 28px;
-        height: 2px;
-        background: #0284c7;
-        display: inline-block;
-    }
-
-    .hero h1 {
-        font-size: clamp(36px, 6vw, 56px);
-        line-height: 1.1;
-        letter-spacing: -1.5px;
-        margin-bottom: 18px;
-    }
-
-    .hero p {
-        color: #cbd5e1;
-        font-size: 15px;
-    }
-
-    main {
-        max-width: 900px;
-        margin: -40px auto 80px;
-        padding: 0 20px;
-        position: relative;
-    }
-
-    .content-card {
-        background: white;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        padding: 48px;
-        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
-    }
-
-    .intro {
-        color: #64748b;
-        font-size: 14px;
-        margin-bottom: 42px;
-        padding-bottom: 28px;
-        border-bottom: 1px solid #e2e8f0;
-    }
-
-    section {
-        margin-bottom: 38px;
-    }
-
-    section:last-child {
-        margin-bottom: 0;
-    }
-
-    h2 {
-        color: #0f172a;
-        font-size: 21px;
-        line-height: 1.3;
-        margin-bottom: 14px;
-        letter-spacing: -0.3px;
-    }
-
-    p {
-        margin-bottom: 14px;
-    }
-
-    ul {
-        margin: 10px 0 0 22px;
-    }
-
-    li {
-        margin-bottom: 7px;
-        padding-left: 4px;
-    }
-
-    a {
-        color: #0284c7;
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .home-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
-        margin-top: 36px;
-        padding: 12px 20px;
-        background: #0f172a;
-        color: white;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.2s ease;
-    }
-
-    .home-button:hover {
-        background: #0284c7;
-        text-decoration: none;
-        transform: translateY(-1px);
-    }
-
-    .footer {
-        text-align: center;
-        padding: 30px 20px 40px;
-        color: #94a3b8;
-        font-size: 13px;
-    }
-
-    @media (max-width: 640px) {
-        .header-inner {
-            padding: 17px 18px;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            blue: '#0284C7'
+                        }
+                    }
+                }
+            }
         }
-
-        .logo {
-            font-size: 20px;
-        }
-
-        .hero {
-            padding: 55px 20px 70px;
-        }
-
-        main {
-            margin-top: -30px;
-        }
-
-        .content-card {
-            padding: 30px 22px;
-            border-radius: 16px;
-        }
-
-        h2 {
-            font-size: 19px;
-        }
-    }
-</style>
-
-
+    </script>
 </head>
 
-<body>
+<body class="bg-slate-50 text-slate-700">
 
-<header>
-    <div class="header-inner">
-        <a href="/" class="logo">
-            Velaro <span>Clean</span>
-        </a>
+    <!-- HEADER -->
+    <header class="bg-brand-navy text-white">
+        <div class="max-w-5xl mx-auto px-6 py-12 md:py-16">
 
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky-500/40 bg-sky-500/10 text-sky-400 text-sm font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+                Dokument informacyjny
+            </div>
 
-    <a href="/" class="back-link">
-        ← Strona główna
-    </a>
-</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+                Polityka prywatności
+            </h1>
 
+            <p class="mt-4 text-lg text-slate-300 max-w-3xl leading-relaxed">
+                Informacje dotyczące przetwarzania danych osobowych
+                użytkowników strony internetowej Velaro Clean.
+            </p>
 
-</header>
+            <p class="mt-6 text-sm text-slate-400">
+                Ostatnia aktualizacja: 28 sierpnia 2026 r.
+            </p>
 
-<section class="hero">
-    <div class="hero-inner">
-        <div class="eyebrow">Informacje prawne</div>
-
-    <h1>Polityka prywatności</h1>
-
-    <p>Informacje dotyczące przetwarzania danych osobowych w Velaro Clean.</p>
-</div>
-
-
-</section>
-
-<main>
-    <article class="content-card">
+        </div>
+    </header>
 
 
-    <div class="intro">
-        Ostatnia aktualizacja: <strong>28 sierpnia 2026 r.</strong>
-    </div>
+    <!-- CONTENT -->
+    <main class="max-w-5xl mx-auto px-6 py-12 md:py-16">
 
-    <section>
-        <h2>1. Informacje ogólne</h2>
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-sm px-6 md:px-12 py-10 md:py-12">
 
-        <p>
-            Niniejsza Polityka prywatności określa zasady przetwarzania danych osobowych
-            osób korzystających ze strony internetowej Velaro Clean oraz kontaktujących
-            się za pośrednictwem dostępnych formularzy i danych kontaktowych.
-        </p>
-    </section>
+            <!-- 1 -->
+            <section class="pb-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        1
+                    </span>
 
-    <section>
-        <h2>2. Administrator danych</h2>
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Informacje ogólne
+                    </h2>
+                </div>
 
-        <p>
-            Administratorem danych osobowych jest <strong>Mikołaj Barchacki</strong>,
-            działający pod marką <strong>Velaro Clean</strong>, w ramach działalności
-            nierejestrowanej, z adresem:
-            ul. Pruszkowska 2a, 05-830 Nadarzyn.
-        </p>
-
-        <p>
-            Kontakt w sprawach związanych z ochroną danych osobowych:
-            <a href="mailto:kontakt@velaroclean.pl">kontakt@velaroclean.pl</a>
-        </p>
-    </section>
-
-    <section>
-        <h2>3. Jakie dane mogą być przetwarzane</h2>
-
-        <p>
-            W zależności od sposobu kontaktu mogą być przetwarzane w szczególności:
-        </p>
-
-        <ul>
-            <li>imię i nazwisko,</li>
-            <li>nazwa firmy,</li>
-            <li>numer telefonu,</li>
-            <li>adres e-mail,</li>
-            <li>informacje przekazane w treści wiadomości,</li>
-            <li>informacje dotyczące rodzaju obiektu lub zakresu zapytania.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>4. Cele przetwarzania danych</h2>
-
-        <p>
-            Dane osobowe mogą być przetwarzane w celu:
-        </p>
-
-        <ul>
-            <li>udzielenia odpowiedzi na przesłane zapytanie,</li>
-            <li>przygotowania oferty lub wyceny usług,</li>
-            <li>kontaktu w sprawie realizacji zapytania,</li>
-            <li>podjęcia działań zmierzających do zawarcia umowy,</li>
-            <li>ustalenia, dochodzenia lub obrony przed ewentualnymi roszczeniami.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>5. Podstawa prawna przetwarzania</h2>
-
-        <p>
-            Dane osobowe są przetwarzane w zależności od celu przetwarzania na podstawie
-            art. 6 ust. 1 lit. b, lit. c lub lit. f Rozporządzenia Parlamentu Europejskiego
-            i Rady (UE) 2016/679 (RODO), w szczególności w celu podjęcia działań na żądanie
-            osoby, której dane dotyczą, przed zawarciem umowy, w celu realizacji obowiązków
-            prawnych oraz w celu wynikającym z prawnie uzasadnionych interesów administratora.
-        </p>
-    </section>
-
-    <section>
-        <h2>6. Dobrowolność podania danych</h2>
-
-        <p>
-            Podanie danych jest dobrowolne, jednak podanie danych oznaczonych jako
-            wymagane może być niezbędne do udzielenia odpowiedzi na zapytanie,
-            przygotowania oferty lub podjęcia kontaktu w sprawie świadczonych usług.
-        </p>
-    </section>
-
-    <section>
-        <h2>7. Odbiorcy danych</h2>
-
-        <p>
-            Dane mogą być przekazywane podmiotom świadczącym na rzecz Velaro Clean usługi
-            niezbędne do prowadzenia strony internetowej, obsługi poczty elektronicznej
-            oraz obsługi formularza kontaktowego, w zakresie niezbędnym do realizacji
-            tych usług.
-        </p>
-    </section>
-
-    <section>
-        <h2>8. Okres przechowywania danych</h2>
-
-        <p>
-            Dane będą przechowywane przez okres niezbędny do obsługi zapytania i prowadzenia
-            dalszej komunikacji, a następnie przez okres niezbędny do ochrony przed
-            ewentualnymi roszczeniami lub przez okres wymagany przepisami prawa,
-            jeżeli przepisy te mają zastosowanie.
-        </p>
-    </section>
-
-    <section>
-        <h2>9. Prawa osoby, której dane dotyczą</h2>
-
-        <p>
-            Osobie, której dane dotyczą, przysługuje prawo dostępu do danych osobowych,
-            ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych
-            oraz wniesienia sprzeciwu wobec przetwarzania — w przypadkach przewidzianych
-            przepisami RODO.
-        </p>
-
-        <p>
-            Przysługuje również prawo wniesienia skargi do Prezesa Urzędu Ochrony
-            Danych Osobowych.
-        </p>
-    </section>
-
-    <section>
-        <h2>10. Pliki cookies</h2>
-
-        <p>
-            Strona może wykorzystywać niezbędne pliki cookies związane z jej prawidłowym
-            działaniem. Szczegółowe informacje znajdują się w
-            <a href="/polityka-cookies.html">Polityce cookies</a>.
-        </p>
-    </section>
-
-    <section>
-        <h2>11. Kontakt</h2>
-
-        <p>
-            W sprawach dotyczących prywatności i przetwarzania danych osobowych można
-            skontaktować się pod adresem:
-            <a href="mailto:kontakt@velaroclean.pl">kontakt@velaroclean.pl</a>
-        </p>
-    </section>
-
-    <a href="/" class="home-button">
-        ← Wróć na stronę główną
-    </a>
-
-</article>
+                <p class="mt-5 text-slate-600 leading-8">
+                    Niniejsza Polityka prywatności określa zasady przetwarzania
+                    danych osobowych osób korzystających ze strony internetowej
+                    Velaro Clean oraz kontaktujących się za pośrednictwem
+                    dostępnych formularzy i danych kontaktowych.
+                </p>
+            </section>
 
 
-</main>
+            <!-- 2 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        2
+                    </span>
 
-<footer class="footer">
-    © 2026 Velaro Clean. Wszelkie prawa zastrzeżone.
-</footer>
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Administrator danych
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Administratorem danych osobowych jest
+                    <strong class="text-slate-900">Mikołaj Barchacki</strong>,
+                    działający pod marką
+                    <strong class="text-slate-900">Velaro Clean</strong>,
+                    w ramach działalności nierejestrowanej, z adresem:
+                    ul. Pruszkowska 2a, 05-830 Nadarzyn.
+                </p>
+
+                <p class="mt-4 text-slate-600 leading-8">
+                    Kontakt w sprawach związanych z ochroną danych osobowych:
+                    <a
+                        href="mailto:kontakt@velaroclean.pl"
+                        class="text-sky-600 hover:text-sky-700 font-medium"
+                    >
+                        kontakt@velaroclean.pl
+                    </a>
+                </p>
+            </section>
+
+
+            <!-- 3 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        3
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Jakie dane mogą być przetwarzane
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    W zależności od sposobu kontaktu mogą być przetwarzane
+                    w szczególności:
+                </p>
+
+                <ul class="mt-4 space-y-3 text-slate-600 list-disc pl-6">
+                    <li>imię i nazwisko,</li>
+                    <li>nazwa firmy,</li>
+                    <li>numer telefonu,</li>
+                    <li>adres e-mail,</li>
+                    <li>informacje przekazane w treści wiadomości,</li>
+                    <li>
+                        informacje dotyczące rodzaju obiektu lub zakresu zapytania.
+                    </li>
+                </ul>
+            </section>
+
+
+            <!-- 4 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        4
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Cele przetwarzania danych
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Dane osobowe mogą być przetwarzane w celu:
+                </p>
+
+                <ul class="mt-4 space-y-3 text-slate-600 list-disc pl-6">
+                    <li>udzielenia odpowiedzi na przesłane zapytanie,</li>
+                    <li>przygotowania oferty lub wyceny usług,</li>
+                    <li>kontaktu w sprawie realizacji zapytania,</li>
+                    <li>
+                        podjęcia działań zmierzających do zawarcia umowy,
+                    </li>
+                    <li>
+                        ustalenia, dochodzenia lub obrony przed ewentualnymi
+                        roszczeniami.
+                    </li>
+                </ul>
+            </section>
+
+
+            <!-- 5 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        5
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Podstawa prawna przetwarzania
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Dane osobowe są przetwarzane w zależności od celu
+                    przetwarzania na podstawie art. 6 ust. 1 lit. b, lit. c
+                    lub lit. f Rozporządzenia Parlamentu Europejskiego i Rady
+                    (UE) 2016/679 (RODO), w szczególności w celu podjęcia działań
+                    na żądanie osoby, której dane dotyczą, przed zawarciem umowy,
+                    w celu realizacji obowiązków prawnych oraz w celu wynikającym
+                    z prawnie uzasadnionych interesów administratora.
+                </p>
+            </section>
+
+
+            <!-- 6 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        6
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Dobrowolność podania danych
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Podanie danych jest dobrowolne, jednak podanie danych
+                    oznaczonych jako wymagane może być niezbędne do udzielenia
+                    odpowiedzi na zapytanie, przygotowania oferty lub podjęcia
+                    kontaktu w sprawie świadczonych usług.
+                </p>
+            </section>
+
+
+            <!-- 7 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        7
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Odbiorcy danych
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Dane mogą być przekazywane podmiotom świadczącym na rzecz
+                    Velaro Clean usługi niezbędne do prowadzenia strony
+                    internetowej, obsługi poczty elektronicznej oraz obsługi
+                    formularza kontaktowego, w zakresie niezbędnym do realizacji
+                    tych usług.
+                </p>
+            </section>
+
+
+            <!-- 8 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        8
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Okres przechowywania danych
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Dane będą przechowywane przez okres niezbędny do obsługi
+                    zapytania i prowadzenia dalszej komunikacji, a następnie
+                    przez okres niezbędny do ochrony przed ewentualnymi
+                    roszczeniami lub przez okres wymagany przepisami prawa,
+                    jeżeli przepisy te mają zastosowanie.
+                </p>
+            </section>
+
+
+            <!-- 9 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        9
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Prawa osoby, której dane dotyczą
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Osobie, której dane dotyczą, przysługuje prawo dostępu
+                    do danych osobowych, ich sprostowania, usunięcia,
+                    ograniczenia przetwarzania, przenoszenia danych oraz
+                    wniesienia sprzeciwu wobec przetwarzania — w przypadkach
+                    przewidzianych przepisami RODO.
+                </p>
+
+                <p class="mt-4 text-slate-600 leading-8">
+                    Przysługuje również prawo wniesienia skargi do Prezesa
+                    Urzędu Ochrony Danych Osobowych.
+                </p>
+            </section>
+
+
+            <!-- 10 -->
+            <section class="py-10 border-b border-slate-200">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        10
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Pliki cookies
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    Strona może wykorzystywać niezbędne pliki cookies związane
+                    z jej prawidłowym działaniem. Szczegółowe informacje
+                    znajdują się w
+                    <a
+                        href="/polityka-cookies.html"
+                        class="text-sky-600 hover:text-sky-700 font-medium"
+                    >
+                        Polityce cookies
+                    </a>.
+                </p>
+            </section>
+
+
+            <!-- 11 -->
+            <section class="pt-10">
+                <div class="flex items-start gap-4">
+                    <span class="shrink-0 w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">
+                        11
+                    </span>
+
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Kontakt
+                    </h2>
+                </div>
+
+                <p class="mt-5 text-slate-600 leading-8">
+                    W sprawach dotyczących prywatności i przetwarzania danych
+                    osobowych można skontaktować się pod adresem:
+                </p>
+
+                <a
+                    href="mailto:kontakt@velaroclean.pl"
+                    class="inline-block mt-3 text-sky-600 hover:text-sky-700 font-semibold"
+                >
+                    kontakt@velaroclean.pl
+                </a>
+            </section>
+
+        </div>
+
+
+        <!-- BACK -->
+        <div class="text-center mt-10">
+            <a
+                href="/"
+                class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-semibold transition"
+            >
+                <span>←</span>
+                Powrót do strony głównej
+            </a>
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 py-8 text-center">
+
+            <p class="text-sm text-slate-400">
+                © 2026 Velaro Clean. Wszelkie prawa zastrzeżone.
+            </p>
+
+            <div class="mt-3 flex justify-center gap-5 text-sm">
+                <a
+                    href="/polityka-prywatnosci.html"
+                    class="text-slate-500 hover:text-slate-300 transition"
+                >
+                    Polityka prywatności
+                </a>
+
+                <a
+                    href="/polityka-cookies.html"
+                    class="text-slate-500 hover:text-slate-300 transition"
+                >
+                    Polityka cookies
+                </a>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 </html>
