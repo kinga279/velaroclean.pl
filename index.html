@@ -990,113 +990,118 @@ zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
     </div>
 </div>
 
-   <!-- MODAL POLITYKA COOKIES -->
+ <!-- MODAL POLITYKA COOKIES -->
+
 <div id="cookie-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
     <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 text-slate-700 text-sm">
 
-        <div class="flex justify-between items-center border-b pb-4">
-            <h3 class="text-xl font-bold text-slate-900">Polityka Cookies</h3>
-            <button
-                onclick="closeModal('cookie-modal')"
-                class="text-slate-400 hover:text-slate-700 text-2xl font-bold"
-                aria-label="Zamknij">
-                &times;
-            </button>
+    <div class="flex justify-between items-center border-b pb-4">
+        <h3 class="text-xl font-bold text-slate-900">Polityka Cookies</h3>
+
+        <button
+            onclick="closeModal('cookie-modal')"
+            class="text-slate-400 hover:text-slate-700 text-2xl font-bold"
+            aria-label="Zamknij">
+            &times;
+        </button>
+    </div>
+
+    <div class="space-y-5">
+
+        <div>
+            <h4 class="font-bold text-slate-900 mb-2">
+                1. Czym są pliki cookies?
+            </h4>
+
+            <p>
+                Pliki cookies to niewielkie pliki tekstowe zapisywane na urządzeniu
+                użytkownika podczas korzystania ze strony internetowej. Mogą one
+                służyć między innymi do zapewnienia prawidłowego działania strony
+                oraz zapamiętywania wybranych ustawień.
+            </p>
         </div>
 
-        <div class="space-y-5">
+        <div>
+            <h4 class="font-bold text-slate-900 mb-2">
+                2. Jakie mechanizmy wykorzystuje strona?
+            </h4>
 
-            <div>
-                <h4 class="font-bold text-slate-900 mb-2">
-                    1. Czym są pliki cookies?
-                </h4>
-                <p>
-                    Pliki cookies to niewielkie pliki tekstowe zapisywane na urządzeniu
-                    użytkownika podczas korzystania ze strony internetowej. Mogą one
-                    służyć między innymi do zapewnienia prawidłowego działania strony
-                    oraz zapamiętywania wybranych ustawień.
-                </p>
-            </div>
+            <p>
+                Strona Velaro Clean nie wykorzystuje obecnie narzędzi analitycznych,
+                reklamowych ani marketingowych, takich jak Google Analytics,
+                Google Ads, Meta Pixel, TikTok Pixel, Hotjar czy Microsoft Clarity.
+            </p>
 
-            <div>
-                <h4 class="font-bold text-slate-900 mb-2">
-                    2. Jakie mechanizmy wykorzystuje strona?
-                </h4>
-          <p>
-    Strona Velaro Clean nie wykorzystuje obecnie narzędzi analitycznych,
-    reklamowych ani marketingowych, takich jak Google Analytics,
-    Google Ads, Meta Pixel, TikTok Pixel, Hotjar czy Microsoft Clarity.
-</p>
+            <p class="mt-2">
+                Strona nie wykorzystuje obecnie nieobowiązkowych plików cookies
+                służących do analizy zachowania użytkowników, personalizacji reklam
+                ani prowadzenia działań marketingowych.
+            </p>
 
-<p class="mt-2">
-    Strona nie wykorzystuje obecnie nieobowiązkowych plików cookies
-    służących do analizy zachowania użytkowników, personalizacji reklam
-    ani prowadzenia działań marketingowych.
-</p>
-
-<p class="mt-2">
-   <p class="mt-2">
-    Formularz kontaktowy korzysta z zewnętrznej usługi Web3Forms,
-    która umożliwia przesłanie wiadomości na adres e-mail Velaro Clean.
-    Dane podane w formularzu są przekazywane za pośrednictwem tej usługi
-    w celu obsługi zapytania kontaktowego. Szczegółowe informacje dotyczące
-    przetwarzania danych osobowych znajdują się w Polityce Prywatności.
-</p>
-
-            </div>
-
-            <div>
-                <h4 class="font-bold text-slate-900 mb-2">
-                    3. Niezbędne mechanizmy
-                </h4>
-                <p>
-                    Strona może korzystać z niezbędnych mechanizmów technicznych
-                    wymaganych do jej prawidłowego działania oraz do zapamiętania
-                    ustawień dotyczących prywatności.
-                </p>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-slate-900 mb-2">
-                    4. Zarządzanie cookies
-                </h4>
-                <p>
-                    Użytkownik może również zmienić ustawienia dotyczące plików cookies
-                    za pomocą ustawień swojej przeglądarki internetowej. Wyłączenie
-                    niektórych mechanizmów technicznych może wpłynąć na prawidłowe
-                    działanie strony.
-                </p>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-slate-900 mb-2">
-                    5. Zmiany Polityki Cookies
-                </h4>
-                <p>
-                    Polityka Cookies może być aktualizowana w przypadku zmiany sposobu
-                    działania strony, wykorzystywanych technologii lub obowiązujących
-                    przepisów.
-                </p>
-            </div>
-
-            <div class="pt-2 border-t">
-                <p class="text-xs text-slate-500">
-                    Ostatnia aktualizacja: 28 sierpnia 2026 r.
-                </p>
-            </div>
-
+            <p class="mt-2">
+                Formularz kontaktowy korzysta z zewnętrznej usługi Web3Forms,
+                która umożliwia przesłanie wiadomości na adres e-mail Velaro Clean.
+                Dane podane w formularzu są przekazywane za pośrednictwem tej usługi
+                w celu obsługi zapytania kontaktowego. Szczegółowe informacje dotyczące
+                przetwarzania danych osobowych znajdują się w Polityce Prywatności.
+            </p>
         </div>
 
-        <div class="border-t pt-4 flex justify-end">
-            <button
-                onclick="saveCookieSettings()"
-                class="px-6 py-2.5 bg-brand-accent text-white font-bold rounded-lg text-xs">
-                Zamknij i zapisz
-            </button>
+        <div>
+            <h4 class="font-bold text-slate-900 mb-2">
+                3. Niezbędne mechanizmy
+            </h4>
+
+            <p>
+                Strona może korzystać z niezbędnych mechanizmów technicznych
+                wymaganych do jej prawidłowego działania oraz do zapamiętania
+                ustawień dotyczących prywatności.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-slate-900 mb-2">
+                4. Zarządzanie cookies
+            </h4>
+
+            <p>
+                Użytkownik może również zmienić ustawienia dotyczące plików cookies
+                za pomocą ustawień swojej przeglądarki internetowej. Wyłączenie
+                niektórych mechanizmów technicznych może wpłynąć na prawidłowe
+                działanie strony.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-slate-900 mb-2">
+                5. Zmiany Polityki Cookies
+            </h4>
+
+            <p>
+                Polityka Cookies może być aktualizowana w przypadku zmiany sposobu
+                działania strony, wykorzystywanych technologii lub obowiązujących
+                przepisów.
+            </p>
+        </div>
+
+        <div class="pt-2 border-t">
+            <p class="text-xs text-slate-500">
+                Ostatnia aktualizacja: 28 sierpnia 2026 r.
+            </p>
         </div>
 
     </div>
+
+    <div class="border-t pt-4 flex justify-end">
+        <button
+            onclick="saveCookieSettings()"
+            class="px-6 py-2.5 bg-brand-accent text-white font-bold rounded-lg text-xs">
+            Zamknij i zapisz
+        </button>
+    </div>
 </div>
+</div>
+
     <!-- SKRYPTY JS -->
     <script>
         // Hamburger Menu Toggle
