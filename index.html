@@ -627,11 +627,13 @@
 </button>
 
 <!-- KOMUNIKAT O SUKCESIE -->
-<div
+
+</form>
+                        <div
     id="form-success-msg"
     class="hidden text-center py-10"
 >
-    <div class="w-16 h-16 mx-auto mb-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                        <div class="w-16 h-16 mx-auto mb-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
         <svg
             class="w-8 h-8"
             fill="none"
@@ -658,8 +660,6 @@
         w ciągu 24 godzin
     </p>
 </div>
-
-</form>
                         </div>
                 </div>
             </div>
@@ -1243,13 +1243,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const data = await response.json();
 
-      if (data.success) {
+if (data.success) {
+    form.classList.add('hidden');
     successMsg.classList.remove('hidden');
-    form.querySelectorAll('input, select, textarea, button, label, p').forEach(el => {
-        if (el !== successMsg && !successMsg.contains(el)) {
-            el.classList.add('hidden');
-        }
-    });
 }
         
         else {
