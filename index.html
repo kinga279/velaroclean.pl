@@ -1243,10 +1243,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const data = await response.json();
 
-        if (data.success) {
-            form.classList.add('hidden');
-            successMsg.classList.remove('hidden');
-        } else {
+      if (data.success) {
+    successMsg.classList.remove('hidden');
+    form.querySelectorAll('input, select, textarea, button, label, p').forEach(el => {
+        if (el !== successMsg && !successMsg.contains(el)) {
+            el.classList.add('hidden');
+        }
+    });
+}
+        
+        else {
             throw new Error();
         }
 
