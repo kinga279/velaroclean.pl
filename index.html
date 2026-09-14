@@ -727,16 +727,17 @@
         </div>
     </footer>
 
-  <!-- BANER COOKIES -->
+<!-- BANER COOKIES -->
 <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-slate-900 border-t border-slate-800 p-4 sm:p-6 text-white z-50 shadow-2xl transition-transform duration-300">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        
+
         <div class="text-xs sm:text-sm text-slate-300 space-y-1">
             <p class="font-bold text-white">Dbamy o Twoją prywatność</p>
+
             <p>
-                Ta strona wykorzystuje wyłącznie niezbędne pliki cookies
-                i podobne mechanizmy wymagane do prawidłowego działania serwisu
-                oraz zapamiętania ustawień prywatności.
+                Ta strona wykorzystuje niezbędne pliki cookies oraz — po wyrażeniu
+                odpowiedniej zgody — technologie związane z reklamą internetową,
+                w tym Google Ads.
                 Szczegóły znajdziesz w
                 <a href="#cookie-modal"
                    onclick="openCookieModal(event)"
@@ -747,17 +748,25 @@
         </div>
 
         <div class="flex flex-wrap gap-2 w-full md:w-auto">
+
             <button
                 onclick="acceptNecessaryCookies()"
+                class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
+                Tylko niezbędne
+            </button>
+
+            <button
+                onclick="acceptAllCookies()"
                 class="flex-1 md:flex-none px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold rounded-lg transition-colors">
-                Rozumiem
+                Akceptuję
             </button>
 
             <button
                 onclick="openCookieModal(event)"
-                class="flex-1 md:flex-none px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg transition-colors border border-slate-700">
+                class="flex-1 md:flex-none px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-xs font-semibold rounded-lg transition-colors">
                 Ustawienia cookies
             </button>
+
         </div>
     </div>
 </div>
@@ -1052,17 +1061,25 @@ zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
                 2. Jakie mechanizmy wykorzystuje strona?
             </h4>
 
-            <p>
-                Strona Velaro Clean nie wykorzystuje obecnie narzędzi analitycznych,
-                reklamowych ani marketingowych, takich jak Google Analytics,
-                Google Ads, Meta Pixel, TikTok Pixel, Hotjar czy Microsoft Clarity.
-            </p>
+           <p>
+    Strona Velaro Clean wykorzystuje niezbędne pliki cookies wymagane
+    do prawidłowego działania strony oraz mechanizmu zarządzania zgodami
+    dotyczącymi cookies.
+</p>
 
-            <p class="mt-2">
-                Strona nie wykorzystuje obecnie nieobowiązkowych plików cookies
-                służących do analizy zachowania użytkowników, personalizacji reklam
-                ani prowadzenia działań marketingowych.
-            </p>
+<p class="mt-2">
+    W przypadku wyrażenia odpowiedniej zgody strona może również
+    wykorzystywać pliki cookies i podobne technologie związane z reklamą
+    internetową, w tym narzędzia Google Ads, w celu prowadzenia kampanii
+    reklamowych oraz pomiaru ich skuteczności.
+</p>
+
+<p class="mt-2">
+    Technologie reklamowe mogą umożliwiać pomiar konwersji, ocenę
+    skuteczności reklam oraz optymalizację prowadzonych kampanii.
+    Zakres wykorzystywanych technologii zależy od konfiguracji narzędzi
+    reklamowych oraz ustawień zgód użytkownika.
+</p>
 
             <p class="mt-2">
                 Formularz kontaktowy korzysta z zewnętrznej usługi Web3Forms,
@@ -1085,6 +1102,47 @@ zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
             </p>
         </div>
 
+<div class="mt-4 p-4 border border-slate-200 rounded-lg">
+    <div class="flex items-center justify-between gap-4">
+        <div>
+            <h4 class="font-bold text-slate-900">
+                Reklamy i marketing
+            </h4>
+
+            <p class="text-sm text-slate-600 mt-1">
+                Zgoda na wykorzystywanie plików cookies i podobnych technologii
+                związanych z reklamą internetową, w tym Google Ads.
+            </p>
+        </div>
+
+        <label class="relative inline-flex items-center cursor-pointer shrink-0">
+            <input
+                type="checkbox"
+                id="advertising-consent"
+                class="sr-only peer"
+            >
+
+            <div class="w-11 h-6 bg-slate-300 rounded-full peer
+                        peer-checked:bg-brand-accent
+                        after:content-['']
+                        after:absolute
+                        after:top-[2px]
+                        after:left-[2px]
+                        after:bg-white
+                        after:border-gray-300
+                        after:border
+                        after:rounded-full
+                        after:h-5
+                        after:w-5
+                        after:transition-all
+                        peer-checked:after:translate-x-full
+                        peer-checked:after:border-white">
+            </div>
+        </label>
+    </div>
+</div>
+
+        
         <div>
             <h4 class="font-bold text-slate-900 mb-2">
                 4. Zarządzanie cookies
@@ -1099,20 +1157,35 @@ zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
         </div>
 
         <div>
-            <h4 class="font-bold text-slate-900 mb-2">
-                5. Zmiany Polityki Cookies
-            </h4>
+    <h4 class="font-bold text-slate-900 mb-2">
+        5. Google Ads
+    </h4>
 
-            <p>
-                Polityka Cookies może być aktualizowana w przypadku zmiany sposobu
-                działania strony, wykorzystywanych technologii lub obowiązujących
-                przepisów.
-            </p>
-        </div>
+    <p>
+        W przypadku wyrażenia przez użytkownika odpowiedniej zgody strona może
+        wykorzystywać narzędzia Google Ads oraz związane z nimi pliki cookies
+        i podobne technologie w celu prowadzenia kampanii reklamowych,
+        pomiaru ich skuteczności oraz optymalizacji reklam.
+    </p>
+
+    <p class="mt-2">
+        Technologie reklamowe Google mogą umożliwiać przypisywanie zdarzeń,
+        takich jak odwiedziny strony lub przesłanie formularza kontaktowego,
+        do działań reklamowych. Zakres przetwarzania zależy od udzielonych
+        zgód oraz konfiguracji wykorzystywanych narzędzi.
+    </p>
+
+    <p class="mt-2">
+        Narzędzia reklamowe nie powinny być uruchamiane przed uzyskaniem
+        wymaganej zgody użytkownika. Użytkownik może w każdej chwili zmienić
+        swoje ustawienia dotyczące zgód za pomocą dostępnych na stronie
+        ustawień cookies.
+    </p>
+</div>
 
         <div class="pt-2 border-t">
             <p class="text-xs text-slate-500">
-                Ostatnia aktualizacja: 28 sierpnia 2026 r.
+                Ostatnia aktualizacja: 14 września 2026 r.
             </p>
         </div>
 
@@ -1199,12 +1272,28 @@ function acceptNecessaryCookies() {
 }
 
 function saveCookieSettings() {
-    localStorage.setItem('velaro_cookie_consent', 'necessary');
+    const advertisingConsent = document.getElementById('advertising-consent');
+
+    if (advertisingConsent && advertisingConsent.checked) {
+        localStorage.setItem('velaro_cookie_consent', 'advertising');
+    } else {
+        localStorage.setItem('velaro_cookie_consent', 'necessary');
+    }
+
     closeModal('cookie-modal');
     hideCookieBanner();
 }
-
+function hasAdvertisingConsent() {
+    return localStorage.getItem('velaro_cookie_consent') === 'advertising';
+}
 function reopenCookieBanner() {
+    const advertisingConsent = document.getElementById('advertising-consent');
+    const consent = localStorage.getItem('velaro_cookie_consent');
+
+    if (advertisingConsent) {
+        advertisingConsent.checked = consent === 'advertising';
+    }
+
     document.getElementById('cookie-banner').classList.remove('translate-y-full');
 }
 
