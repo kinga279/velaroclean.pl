@@ -1299,23 +1299,53 @@ function showCookieBanner() {
     }
 }
 
+function updateGoogleConsent(advertisingGranted) {
+    if (typeof gtag !== 'function') {
+        return;
+    }
+
+    if (advertisingGranted) {
+        gtag('consent', 'update', {
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            analytics_storage: 'denied'
+        });
+    } else {
+        gtag('consent', 'update', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied'
+        });
+    }
+}
+
 function acceptNecessaryCookies() {
     localStorage.setItem('velaro_cookie_consent', 'necessary');
+
+    updateGoogleConsent(false);
     hideCookieBanner();
 }
 
 function acceptAllCookies() {
     localStorage.setItem('velaro_cookie_consent', 'advertising');
+
+    updateGoogleConsent(true);
     hideCookieBanner();
 }
-
 function saveCookieSettings() {
     const advertisingConsent = document.getElementById('advertising-consent');
 
-    if (advertisingConsent && advertisingConsent.checked) {
+    const advertisingGranted =
+        advertisingConsent && advertisingConsent.checked;
+
+    if (advertisingGranted) {
         localStorage.setItem('velaro_cookie_consent', 'advertising');
+        updateGoogleConsent(true);
     } else {
         localStorage.setItem('velaro_cookie_consent', 'necessary');
+        updateGoogleConsent(false);
     }
 
     closeModal('cookie-modal');
@@ -1341,11 +1371,17 @@ function reopenCookieBanner() {
 document.addEventListener('DOMContentLoaded', function() {
     const cookieConsent = localStorage.getItem('velaro_cookie_consent');
 
-    if (cookieConsent) {
-        hideCookieBanner();
-    } else {
-        showCookieBanner();
-    }
+if (cookieConsent) {
+    hideCookieBanner();
+
+    updateGoogleConsent(
+        cookieConsent === 'advertising'
+    );
+} else {
+    showCookieBanner();
+
+    updateGoogleConsent(false);
+}
 });
     </script>
     <script>
