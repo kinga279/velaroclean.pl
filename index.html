@@ -1417,6 +1417,15 @@ if (cookieConsent) {
         const data = await response.json();
 
 if (data.success) {
+
+    // Zgłoszenie zostało poprawnie wysłane do Web3Forms.
+    // Dopiero teraz zgłaszamy konwersję Google Ads.
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18422354078/aVRYCLrZy_gcEJ6hu9BE'
+        });
+    }
+
     form.classList.add('hidden');
     successMsg.classList.remove('hidden');
 }
