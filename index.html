@@ -1260,14 +1260,31 @@ zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
             document.getElementById(id).classList.remove('flex');
         }
 
-      // Cookie Banner Handlers
+// Cookie Banner Handlers
+
 function hideCookieBanner() {
-    document.getElementById('cookie-banner').classList.add('translate-y-full');
+    const banner = document.getElementById('cookie-banner');
+
+    if (banner) {
+        banner.classList.add('translate-y-full');
+    }
 }
 
+function showCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+
+    if (banner) {
+        banner.classList.remove('translate-y-full');
+    }
+}
 
 function acceptNecessaryCookies() {
     localStorage.setItem('velaro_cookie_consent', 'necessary');
+    hideCookieBanner();
+}
+
+function acceptAllCookies() {
+    localStorage.setItem('velaro_cookie_consent', 'advertising');
     hideCookieBanner();
 }
 
@@ -1283,9 +1300,11 @@ function saveCookieSettings() {
     closeModal('cookie-modal');
     hideCookieBanner();
 }
+
 function hasAdvertisingConsent() {
     return localStorage.getItem('velaro_cookie_consent') === 'advertising';
 }
+
 function reopenCookieBanner() {
     const advertisingConsent = document.getElementById('advertising-consent');
     const consent = localStorage.getItem('velaro_cookie_consent');
@@ -1294,15 +1313,17 @@ function reopenCookieBanner() {
         advertisingConsent.checked = consent === 'advertising';
     }
 
-    document.getElementById('cookie-banner').classList.remove('translate-y-full');
+    showCookieBanner();
 }
 
-// Sprawdzenie, czy użytkownik wcześniej wybrał ustawienia cookies
+// Sprawdzenie zapisanej zgody
 document.addEventListener('DOMContentLoaded', function() {
     const cookieConsent = localStorage.getItem('velaro_cookie_consent');
 
     if (cookieConsent) {
         hideCookieBanner();
+    } else {
+        showCookieBanner();
     }
 });
     </script>
