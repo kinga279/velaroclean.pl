@@ -1331,7 +1331,13 @@ function acceptNecessaryCookies() {
 function acceptAllCookies() {
     localStorage.setItem('velaro_cookie_consent', 'advertising');
 
-    updateGoogleConsent(true);
+    gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'denied'
+    });
+
     hideCookieBanner();
 }
 function saveCookieSettings() {
